@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | RainDrops - Smart Rainwater Solutions</title>
+    <style>
+        /* Global Styles */
+        :root {
+            --deep-blue: #1a4b8c;
+            --aqua-green: #2ec4b6;
+            --light-gray: #f8f9fa;
+            --dark-gray: #343a40;
+            --white: #ffffff;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light-gray);
+            color: var(--dark-gray);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .logo h1 {
+            color: var(--deep-blue);
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .logo span {
+            color: var(--aqua-green);
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--dark-gray);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            margin: 0 5px;
+            font-weight: 500;
+            transition: var(--transition);
+            border-radius: 4px;
+        }
+
+        .nav-links a:hover, .nav-links a:focus {
+            background-color: var(--aqua-green);
+            color: var(--white);
+        }
+
+        .nav-links a[aria-current="page"] {
+            background-color: var(--deep-blue);
+            color: var(--white);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--deep-blue);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(26, 75, 140, 0.8), rgba(46, 196, 182, 0.8)), 
+                        url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        /* Privacy Policy Content */
+        .privacy-content {
+            background-color: var(--white);
+            padding: 4rem 0;
+        }
+
+        .privacy-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .privacy-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .privacy-header h1 {
+            color: var(--deep-blue);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .privacy-header p {
+            color: var(--dark-gray);
+            font-size: 1.1rem;
+        }
+
+        .last-updated {
+            text-align: center;
+            font-style: italic;
+            margin-bottom: 2rem;
+            color: var(--dark-gray);
+        }
+
+        .privacy-section {
+            margin-bottom: 3rem;
+        }
+
+        .privacy-section h2 {
+            color: var(--deep-blue);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            border-bottom: 2px solid var(--aqua-green);
+            padding-bottom: 0.5rem;
+        }
+
+        .privacy-section h3 {
+            color: var(--deep-blue);
+            margin: 2rem 0 1rem;
+            font-size: 1.4rem;
+        }
+
+        .privacy-section p {
+            margin-bottom: 1.2rem;
+            line-height: 1.7;
+        }
+
+        .privacy-section ul {
+            margin-bottom: 2rem;
+            padding-left: 2rem;
+        }
+
+        .privacy-section li {
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        .highlight-box {
+            background-color: var(--light-gray);
+            border-left: 4px solid var(--aqua-green);
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-gray);
+            color: var(--white);
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h3 {
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            position: relative;
+        }
+
+        .footer-col h3::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 50px;
+            height: 2px;
+            background-color: var(--aqua-green);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: #b1b1b1;
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-block;
+        }
+
+        .footer-links a:hover {
+            color: var(--aqua-green);
+            transform: translateX(5px);
+        }
+
+        .contact-info {
+            list-style: none;
+        }
+
+        .contact-info li {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .contact-info i {
+            color: var(--aqua-green);
+            margin-right: 10px;
+            margin-top: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--white);
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--aqua-green);
+            transform: translateY(-5px);
+        }
+
+        .newsletter-form {
+            display: flex;
+            margin-top: 1.5rem;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 4px 0 0 4px;
+            font-size: 1rem;
+        }
+
+        .newsletter-form button {
+            background-color: var(--aqua-green);
+            color: var(--white);
+            border: none;
+            padding: 0 1.5rem;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .newsletter-form button:hover {
+            background-color: var(--deep-blue);
+        }
+
+        /* Footer Bottom */
+        .footer-bottom {
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+
+        .footer-bottom-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .copyright {
+            margin-bottom: 1rem;
+            color: #b1b1b1;
+        }
+
+        .legal-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .legal-links a {
+            color: #b1b1b1;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .legal-links a:hover {
+            color: var(--aqua-green);
+        }
+
+        /* Dark Mode */
+        .dark-mode {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        .dark-mode .privacy-content {
+            background-color: #1e1e1e;
+        }
+
+        .dark-mode .privacy-section h2,
+        .dark-mode .privacy-section h3 {
+            color: var(--aqua-green);
+        }
+
+        .dark-mode .highlight-box {
+            background-color: #2d2d2d;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+
+            .header-container {
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            .logo {
+                margin-bottom: 1rem;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+                display: none;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                margin: 0.2rem 0;
+                padding: 0.8rem;
+                text-align: center;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+            }
+
+            .hero {
+                height: auto;
+                padding: 4rem 0;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .privacy-header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <h1>Rain<span>Drops</span></h1>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                  <li><a href="index.html">Home</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Privacy Policy</h2>
+            <p>Your privacy is important to us. Learn how we collect, use, and protect your information.</p>
+        </div>
+    </section>
+
+    <!-- Privacy Policy Content -->
+    <section class="privacy-content">
+        <div class="container privacy-container">
+            <div class="privacy-header">
+                <h1>RainDrops Privacy Policy</h1>
+                <p>This Privacy Policy explains how RainDrops collects, uses, discloses, and safeguards your information when you visit our website or use our services.</p>
+            </div>
+
+            <div class="last-updated">
+                <p>Last Updated: June 15, 2023</p>
+            </div>
+
+            <div class="privacy-section">
+                <h2>1. Introduction</h2>
+                <p>RainDrops ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy applies to all users of our website, mobile applications, and services. By accessing or using our services, you agree to the collection and use of information in accordance with this policy.</p>
+                
+                <div class="highlight-box">
+                    <p><strong>Key Point:</strong> This policy applies to all information collected through our services, including personal data that identifies you as an individual.</p>
+                </div>
+            </div>
+
+            <div class="privacy-section">
+                <h2>2. Information We Collect</h2>
+                <p>We collect several types of information from and about users of our services, including:</p>
+                
+                <h3>2.1 Personal Information</h3>
+                <ul>
+                    <li><strong>Contact Information:</strong> Name, email address, phone number, mailing address when you create an account, request information, or make a purchase.</li>
+                    <li><strong>Account Credentials:</strong> Username, password, security questions for account access.</li>
+                    <li><strong>Payment Information:</strong> Credit card numbers, billing address when you purchase our products or services.</li>
+                    <li><strong>Demographic Information:</strong> Age, gender, preferences that you voluntarily provide.</li>
+                </ul>
+                
+                <h3>2.2 Non-Personal Information</h3>
+                <ul>
+                    <li><strong>Usage Data:</strong> Information about how you interact with our website and services.</li>
+                    <li><strong>Device Information:</strong> IP address, browser type, operating system, device identifiers.</li>
+                    <li><strong>Location Data:</strong> Approximate geographic location derived from IP address or GPS (with permission).</li>
+                </ul>
+            </div>
+
+            <div class="privacy-section">
+                <h2>3. How We Collect Information</h2>
+                <p>We use various methods to collect data from and about you, including:</p>
+                
+                <h3>3.1 Direct Collection</h3>
+                <ul>
+                    <li>When you register for an account or fill out forms on our website.</li>
+                    <li>When you purchase products or subscribe to our services.</li>
+                    <li>When you contact our customer support team.</li>
+                    <li>When you participate in surveys, promotions, or contests.</li>
+                </ul>
+                
+                <h3>3.2 Automated Technologies</h3>
+                <ul>
+                    <li><strong>Cookies:</strong> Small data files stored on your device to enhance user experience.</li>
+                    <li><strong>Web Beacons:</strong> Electronic files to count users and analyze website performance.</li>
+                    <li><strong>Log Files:</strong> Track actions occurring on the website and collect IP addresses.</li>
+                </ul>
+                
+                <h3>3.3 Third-Party Sources</h3>
+                <ul>
+                    <li>Social media platforms when you interact with our content.</li>
+                    <li>Analytics providers like Google Analytics.</li>
+                    <li>Payment processors for transaction verification.</li>
+                </ul>
+            </div>
+
+            <div class="privacy-section">
+                <h2>4. How We Use Your Information</h2>
+                <p>We use the information we collect for various business purposes, including:</p>
+                
+                <ul>
+                    <li><strong>Service Provision:</strong> To provide and maintain our services, process transactions, and manage accounts.</li>
+                    <li><strong>Customer Support:</strong> To respond to inquiries, troubleshoot issues, and provide technical support.</li>
+                    <li><strong>Personalization:</strong> To customize content and recommendations based on your preferences.</li>
+                    <li><strong>Marketing:</strong> To send promotional materials about products, services, and offers.</li>
+                    <li><strong>Analytics:</strong> To analyze usage trends and improve our website and services.</li>
+                    <li><strong>Security:</strong> To detect and prevent fraudulent activity and security breaches.</li>
+                    <li><strong>Legal Compliance:</strong> To comply with applicable laws and regulations.</li>
+                </ul>
+            </div>
+
+            <div class="privacy-section">
+                <h2>5. Legal Basis for Processing (GDPR)</h2>
+                <p>For users in the European Economic Area (EEA), we process personal data under the following legal bases:</p>
+                
+                <ul>
+                    <li><strong>Consent:</strong> When you voluntarily provide information for specific purposes.</li>
+                    <li><strong>Contractual Necessity:</strong> To fulfill our obligations under a contract with you.</li>
+                    <li><strong>Legal Obligation:</strong> When processing is required by applicable laws.</li>
+                    <li><strong>Legitimate Interests:</strong> For our business purposes when balanced against your rights.</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <p><strong>Key Point:</strong> You have the right to withdraw consent at any time where processing is based on consent.</p>
+                </div>
+            </div>
+
+            <div class="privacy-section">
+                <h2>6. Information Sharing and Disclosure</h2>
+                <p>We may share your information in the following circumstances:</p>
+                
+                <h3>6.1 Service Providers</h3>
+                <ul>
+                    <li>Payment processors for transaction completion.</li>
+                    <li>Cloud hosting providers for data storage.</li>
+                    <li>Marketing agencies for promotional campaigns.</li>
+                    <li>Analytics providers for website optimization.</li>
+                </ul>
+                
+                <h3>6.2 Business Transfers</h3>
+                <p>In connection with any merger, acquisition, or sale of assets, your information may be transferred as a business asset.</p>
+                
+                <h3>6.3 Legal Requirements</h3>
+                <p>We may disclose information if required by law or in response to valid requests by public authorities.</p>
+            </div>
+
+            <div class="privacy-section">
+                <h2>7. Data Security</h2>
+                <p>We implement appropriate technical and organizational measures to protect personal data, including:</p>
+                
+                <ul>
+                    <li>Encryption of sensitive data in transit and at rest.</li>
+                    <li>Regular security assessments and vulnerability testing.</li>
+                    <li>Access controls and authentication mechanisms.</li>
+                    <li>Employee training on data protection best practices.</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <p><strong>Important:</strong> While we implement robust security measures, no system is 100% secure. We cannot guarantee absolute security of your information.</p>
+                </div>
+            </div>
+
+            <div class="privacy-section">
+                <h2>8. Data Retention</h2>
+                <p>We retain personal data only for as long as necessary to fulfill the purposes outlined in this policy, including:</p>
+                
+                <ul>
+                    <li>For the duration of your account's existence plus a reasonable period thereafter.</li>
+                    <li>As required by applicable laws, regulations, or legal proceedings.</li>
+                    <li>For legitimate business needs such as dispute resolution and contract enforcement.</li>
+                </ul>
+            </div>
+
+            <div class="privacy-section">
+                <h2>9. Your Privacy Rights</h2>
+                <p>Depending on your jurisdiction, you may have the following rights regarding your personal data:</p>
+                
+                <h3>9.1 Access and Portability</h3>
+                <p>Request a copy of your personal data in a structured, commonly used format.</p>
+                
+                <h3>9.2 Rectification</h3>
+                <p>Request correction of inaccurate or incomplete personal data.</p>
+                
+                <h3>9.3 Erasure ("Right to be Forgotten")</h3>
+                <p>Request deletion of your personal data under certain circumstances.</p>
+                
+                <h3>9.4 Restriction of Processing</h3>
+                <p>Request limitation on how we use your personal data.</p>
+                
+                <h3>9.5 Objection</h3>
+                <p>Object to processing of your personal data for direct marketing or other purposes.</p>
+                
+                <h3>9.6 Withdraw Consent</h3>
+                <p>Withdraw previously given consent at any time.</p>
+                
+                <h3>9.7 Complaints</h3>
+                <p>Lodge a complaint with a supervisory authority in your jurisdiction.</p>
+            </div>
+
+            <div class="privacy-section">
+                <h2>10. Cookies and Tracking Technologies</h2>
+                <p>We use cookies and similar tracking technologies to enhance user experience and analyze website usage.</p>
+                
+                <h3>10.1 Types of Cookies</h3>
+                <ul>
+                    <li><strong>Essential Cookies:</strong> Necessary for website functionality.</li>
+                    <li><strong>Performance Cookies:</strong> Collect information about website usage.</li>
+                    <li><strong>Functionality Cookies:</strong> Remember user preferences.</li>
+                    <li><strong>Targeting Cookies:</strong> Deliver relevant advertisements.</li>
+                </ul>
+                
+                <h3>10.2 Cookie Management</h3>
+                <p>Most browsers allow you to control cookies through settings. However, disabling cookies may affect website functionality.</p>
+            </div>
+
+            <div class="privacy-section">
+                <h2>11. Third-Party Links</h2>
+                <p>Our website may contain links to third-party websites. This Privacy Policy does not apply to those sites, and we are not responsible for their privacy practices.</p>
+            </div>
+
+            <div class="privacy-section">
+                <h2>12. Children's Privacy</h2>
+                <p>Our services are not directed to children under 16. We do not knowingly collect personal information from children without parental consent.</p>
+            </div>
+
+            <div class="privacy-section">
+                <h2>13. International Data Transfers</h2>
+                <p>Your information may be transferred to and maintained on computers located outside your jurisdiction, where data protection laws may differ.</p>
+                
+                <div class="highlight-box">
+                    <p><strong>For EEA Users:</strong> We implement appropriate safeguards for international transfers, including Standard Contractual Clauses.</p>
+                </div>
+            </div>
+
+            <div class="privacy-section">
+                <h2>14. California Privacy Rights (CCPA)</h2>
+                <p>California residents have specific rights under the California Consumer Privacy Act (CCPA):</p>
+                
+                <ul>
+                    <li>Right to know what personal information is collected.</li>
+                    <li>Right to delete personal information (with exceptions).</li>
+                    <li>Right to opt-out of the sale of personal information.</li>
+                    <li>Right to non-discrimination for exercising CCPA rights.</li>
+                </ul>
+            </div>
+
+            <div class="privacy-section">
+                <h2>15. Nevada Privacy Rights</h2>
+                <p>Nevada residents may opt out of the sale of certain personal information under Nevada law.</p>
+            </div>
+
+            <div class="privacy-section">
+                <h2>16. Changes to This Policy</h2>
+                <p>We may update this Privacy Policy periodically. We will notify you of material changes through our website or other communication methods.</p>
+            </div>
+
+            <div class="privacy-section">
+                <h2>17. Contact Us</h2>
+                <p>If you have questions about this Privacy Policy or wish to exercise your privacy rights, please contact us:</p>
+                
+                <p><strong>Email:</strong> privacy@raindrops.com</p>
+                <p><strong>Mail:</strong> Privacy Officer, RainDrops Inc., 123 Water Way, Suite 100, Portland, OR 97201</p>
+                <p><strong>Phone:</strong> 1-800-RAIN-DROP (1-800-724-6376)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-col">
+                <h3>RainDrops</h3>
+                <p>Smart rainwater solutions for the modern city. Sustainable, efficient, and future-ready water management systems.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="solutions.html">Solutions</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Support</h3>
+                <ul class="footer-links">
+                    <li><a href="faq.html">FAQs</a></li>
+                    <li><a href="installation.html">Installation Guides</a></li>
+                    <li><a href="maintenance.html">Maintenance Tips</a></li>
+                    <li><a href="warranty.html">Warranty Info</a></li>
+                    <li><a href="support.html">Technical Support</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+                <ul class="contact-info">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>123 Water Way, Suite 100<br>Portland, OR 97201</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone-alt"></i>
+                        <span>1-800-RAIN-DROP<br>(1-800-724-6376)</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span>info@raindrops.com</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-clock"></i>
+                        <span>Monday-Friday: 9AM-6PM PST</span>
+                    </li>
+                </ul>
+                
+                <h3>Newsletter</h3>
+                <p>Stay updated on urban water innovations and product news.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address">
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container footer-bottom-container">
+                <div class="copyright">
+                    &copy; 2023 RainDrops Inc. All rights reserved.
+                </div>
+                <div class="legal-links">
+                    <a href="privacy.html" tabindex="0" aria-current="page">Privacy Policy</a>
+                    <a href="terms.html" tabindex="0">Terms & Conditions</a>
+                    <a href="cookies.html" tabindex="0">Cookie Policy</a>
+                    <a href="accessibility.html">Accessibility</a>
+                    <a href="sitemap.html">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Dark Mode Toggle
+        const darkModeToggle = document.createElement('button');
+        darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        darkModeToggle.style.position = 'fixed';
+        darkModeToggle.style.bottom = '20px';
+        darkModeToggle.style.right = '20px';
+        darkModeToggle.style.width = '50px';
+        darkModeToggle.style.height = '50px';
+        darkModeToggle.style.borderRadius = '50%';
+        darkModeToggle.style.backgroundColor = 'var(--deep-blue)';
+        darkModeToggle.style.color = 'white';
+        darkModeToggle.style.border = 'none';
+        darkModeToggle.style.cursor = 'pointer';
+        darkModeToggle.style.boxShadow = '0 2px 10px rgba(0,0,0,0.2)';
+        darkModeToggle.style.zIndex = '1000';
+        darkModeToggle.style.display = 'flex';
+        darkModeToggle.style.justifyContent = 'center';
+        darkModeToggle.style.alignItems = 'center';
+        darkModeToggle.style.fontSize = '1.2rem';
+        
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            darkModeToggle.innerHTML = document.body.classList.contains('dark-mode') ? 
+                '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+        });
+        
+        document.body.appendChild(darkModeToggle);
+    </script>
+</body>
+</html>

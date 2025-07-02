@@ -1,0 +1,1705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RainDrops - Smart Rainwater Solutions for the Modern City</title>
+    <style>
+        /* Global Styles */
+        :root {
+            --deep-blue: #1a4b8c;
+            --aqua-green: #2ec4b6;
+            --light-gray: #f8f9fa;
+            --dark-gray: #343a40;
+            --white: #ffffff;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light-gray);
+            color: var(--dark-gray);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .logo h1 {
+            color: var(--deep-blue);
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .logo span {
+            color: var(--aqua-green);
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--dark-gray);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            margin: 0 5px;
+            font-weight: 500;
+            transition: var(--transition);
+            border-radius: 4px;
+        }
+
+        .nav-links a:hover, .nav-links a:focus {
+            background-color: var(--aqua-green);
+            color: var(--white);
+        }
+
+        .nav-links a[aria-current="page"] {
+            background-color: var(--deep-blue);
+            color: var(--white);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--deep-blue);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(26, 75, 140, 0.8), rgba(46, 196, 182, 0.8)), 
+                        url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--aqua-green);
+            color: var(--white);
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            background-color: var(--deep-blue);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--white);
+            margin-left: 15px;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--deep-blue);
+        }
+
+        /* Why Raindrops Section */
+        .section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--deep-blue);
+            margin-bottom: 1rem;
+        }
+
+        .section-title p {
+            color: var(--dark-gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .why-raindrops {
+            background-color: var(--white);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background-color: var(--light-gray);
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--aqua-green);
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            color: var(--deep-blue);
+            margin-bottom: 1rem;
+        }
+
+        /* Infographic Animation */
+        .infographic {
+            position: relative;
+            height: 400px;
+            margin: 3rem auto;
+            max-width: 800px;
+        }
+
+        .water-drop {
+            position: absolute;
+            width: 30px;
+            height: 40px;
+            background-color: var(--aqua-green);
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
+            animation: drop-fall 3s infinite;
+            opacity: 0.8;
+        }
+
+        .water-vault {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 150px;
+            background-color: var(--deep-blue);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--white);
+            font-weight: bold;
+        }
+
+        .clean-water {
+            position: absolute;
+            bottom: 150px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 0;
+            background-color: var(--aqua-green);
+            border-radius: 0 0 10px 10px;
+            transition: height 2s;
+            animation: fill-up 3s infinite;
+        }
+
+        @keyframes drop-fall {
+            0% { top: 0; opacity: 0; }
+            10% { opacity: 0.8; }
+            90% { opacity: 0.8; }
+            100% { top: 300px; opacity: 0; }
+        }
+
+        @keyframes fill-up {
+            0%, 30% { height: 0; }
+            100% { height: 100px; }
+        }
+
+        /* Products Section */
+        .products {
+            background-color: var(--light-gray);
+        }
+
+        .product-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background-color: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-img {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .product-content {
+            padding: 1.5rem;
+        }
+
+        .product-content h3 {
+            color: var(--deep-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .product-content p {
+            margin-bottom: 1rem;
+            color: var(--dark-gray);
+        }
+
+        .product-features {
+            margin: 1rem 0;
+        }
+
+        .product-features li {
+            list-style: none;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .product-features li::before {
+            content: "✓";
+            color: var(--aqua-green);
+            margin-right: 0.5rem;
+            font-weight: bold;
+        }
+
+        /* How It Works Section */
+        .how-it-works {
+            background-color: var(--white);
+        }
+
+        .steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .step {
+            flex: 1;
+            min-width: 250px;
+            max-width: 300px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 2rem;
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background-color: var(--aqua-green);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 1rem;
+        }
+
+        .step h3 {
+            color: var(--deep-blue);
+            margin-bottom: 1rem;
+        }
+
+        .step p {
+            color: var(--dark-gray);
+        }
+
+        .step:not(:last-child)::after {
+            content: "→";
+            position: absolute;
+            right: -30px;
+            top: 25px;
+            color: var(--aqua-green);
+            font-size: 1.5rem;
+        }
+
+        /* Smart Features Section */
+        .smart-features {
+            background-color: var(--light-gray);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-item {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .feature-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-item h3 {
+            color: var(--deep-blue);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .feature-item h3 i {
+            margin-right: 10px;
+            color: var(--aqua-green);
+        }
+
+        /* App Showcase */
+        .app-showcase {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .app-demo {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+
+        .app-demo img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .app-features {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .app-feature {
+            margin-bottom: 1.5rem;
+        }
+
+        .app-feature h4 {
+            color: var(--deep-blue);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .app-feature h4 i {
+            color: var(--aqua-green);
+            margin-right: 10px;
+        }
+
+        /* Sustainability Impact */
+        .impact-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .stat-card {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--aqua-green);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--deep-blue);
+            font-weight: 500;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            margin: 3rem 0;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: "";
+            font-size: 5rem;
+            color: var(--aqua-green);
+            opacity: 0.2;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            line-height: 1;
+        }
+
+        .testimonial-content {
+            margin-bottom: 1rem;
+            font-style: italic;
+            color: var(--dark-gray);
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--light-gray);
+            margin-right: 1rem;
+            overflow: hidden;
+        }
+
+        .author-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .author-info h4 {
+            color: var(--deep-blue);
+        }
+
+        .author-info p {
+            color: var(--dark-gray);
+            font-size: 0.9rem;
+        }
+
+        /* Certifications */
+        .certifications {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .certification-logo {
+            height: 60px;
+            opacity: 0.7;
+            transition: var(--transition);
+        }
+
+        .certification-logo:hover {
+            opacity: 1;
+        }
+
+        /* Blog Section */
+        .blog-preview {
+            margin: 3rem 0;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .blog-card {
+            background-color: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .blog-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .blog-img {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .blog-content {
+            padding: 1.5rem;
+        }
+
+        .blog-date {
+            color: var(--aqua-green);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-content h3 {
+            color: var(--deep-blue);
+            margin-bottom: 1rem;
+        }
+
+        .blog-content p {
+            color: var(--dark-gray);
+            margin-bottom: 1rem;
+        }
+
+        .read-more {
+            color: var(--aqua-green);
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .read-more i {
+            margin-left: 5px;
+            transition: var(--transition);
+        }
+
+        .read-more:hover i {
+            transform: translateX(5px);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(rgba(26, 75, 140, 0.9), rgba(26, 75, 140, 0.9)), 
+                        url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            padding: 5rem 0;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-section p {
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            font-size: 1.1rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        /* Calculator */
+        .calculator {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            max-width: 600px;
+            margin: 3rem auto;
+        }
+
+        .calculator h3 {
+            color: var(--deep-blue);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--dark-gray);
+            font-weight: 500;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .calculator-result {
+            background-color: var(--light-gray);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 1.5rem;
+            text-align: center;
+        }
+
+        .calculator-result h4 {
+            color: var(--deep-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .result-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--aqua-green);
+        }
+
+        /* Partners Section */
+        .partners {
+            margin: 3rem 0;
+        }
+
+        .partner-logos {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .partner-logo {
+            height: 60px;
+            opacity: 0.7;
+            transition: var(--transition);
+        }
+
+        .partner-logo:hover {
+            opacity: 1;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-gray);
+            color: var(--white);
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h3 {
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            position: relative;
+        }
+
+        .footer-col h3::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 50px;
+            height: 2px;
+            background-color: var(--aqua-green);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: #b1b1b1;
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-block;
+        }
+
+        .footer-links a:hover {
+            color: var(--aqua-green);
+            transform: translateX(5px);
+        }
+
+        .contact-info {
+            list-style: none;
+        }
+
+        .contact-info li {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .contact-info i {
+            color: var(--aqua-green);
+            margin-right: 10px;
+            margin-top: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--white);
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--aqua-green);
+            transform: translateY(-5px);
+        }
+
+        .newsletter-form {
+            display: flex;
+            margin-top: 1.5rem;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 4px 0 0 4px;
+            font-size: 1rem;
+        }
+
+        .newsletter-form button {
+            background-color: var(--aqua-green);
+            color: var(--white);
+            border: none;
+            padding: 0 1.5rem;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .newsletter-form button:hover {
+            background-color: var(--deep-blue);
+        }
+
+        /* Footer Bottom */
+        .footer-bottom {
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+
+        .footer-bottom-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .copyright {
+            margin-bottom: 1rem;
+            color: #b1b1b1;
+        }
+
+        .legal-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .legal-links a {
+            color: #b1b1b1;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .legal-links a:hover {
+            color: var(--aqua-green);
+        }
+
+        /* Customer Satisfaction */
+        .satisfaction {
+            background-color: var(--deep-blue);
+            padding: 1rem 0;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .satisfaction p {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Disclaimer */
+        .disclaimer {
+            background-color: #f8d7da;
+            color: #721c24;
+            padding: 1rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        /* Dark Mode */
+        .dark-mode {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        .dark-mode .section {
+            background-color: #1e1e1e;
+        }
+
+        .dark-mode .feature-card,
+        .dark-mode .product-card,
+        .dark-mode .feature-item,
+        .dark-mode .testimonial-card,
+        .dark-mode .blog-card,
+        .dark-mode .calculator {
+            background-color: #2d2d2d;
+            color: #e0e0e0;
+        }
+
+        .dark-mode .product-content h3,
+        .dark-mode .feature-item h3,
+        .dark-mode .blog-content h3,
+        .dark-mode .step h3 {
+            color: var(--aqua-green);
+        }
+
+        .dark-mode .footer-links a,
+        .dark-mode .contact-info,
+        .dark-mode .copyright,
+        .dark-mode .legal-links a {
+            color: #b1b1b1;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .step:not(:last-child)::after {
+                display: none;
+            }
+
+            .steps {
+                gap: 1rem;
+            }
+
+            .step {
+                min-width: 200px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .header-container {
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            .logo {
+                margin-bottom: 1rem;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+                display: none;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                margin: 0.2rem 0;
+                padding: 0.8rem;
+                text-align: center;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+            }
+
+            .app-showcase {
+                flex-direction: column;
+            }
+
+            .app-demo {
+                order: -1;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn-outline {
+                margin-left: 0;
+                margin-top: 1rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero {
+                height: auto;
+                padding: 4rem 0;
+            }
+
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .section {
+                padding: 3rem 0;
+            }
+
+            .calculator {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <h1>Rain<span>Drops</span></h1>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Your Urban Water Bank — Store Every Drop.</h2>
+            <p>Future-Ready. Eco-Smart. Rainwater harvesting solutions for modern city living.</p>
+            <div>
+                <a href="#products" class="btn">Discover Smart Water Solutions</a>
+                <a href="#calculator" class="btn btn-outline">Calculate Your Savings</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Raindrops Section -->
+    <section class="section why-raindrops">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose RainDrops?</h2>
+                <p>Urban water scarcity is a growing challenge. Our smart rainwater harvesting systems help cities become more resilient and sustainable.</p>
+            </div>
+            
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <h3>Water Conservation</h3>
+                    <p>Capture and reuse rainwater, reducing your dependence on municipal water supplies by up to 50%.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Sustainability</h3>
+                    <p>Lower your environmental footprint by reducing stormwater runoff and energy used for water treatment.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Smart Technology</h3>
+                    <p>Monitor and control your water system remotely with our intuitive mobile app and IoT sensors.</p>
+                </div>
+            </div>
+            
+            <div class="infographic">
+                <div class="water-drop"></div>
+                <div class="clean-water"></div>
+                <div class="water-vault">Smart Water Vault</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="section products" id="products">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Product Solutions</h2>
+                <p>Designed for every urban space, from compact balconies to large commercial rooftops.</p>
+            </div>
+            
+            <div class="product-categories">
+                <div class="product-card">
+                    <div class="product-img" style="background-image: url('P1.avif');"></div>
+                    <div class="product-content">
+                        <h3>Residential Systems</h3>
+                        <p>Compact, efficient solutions for homes and townhouses.</p>
+                        <ul class="product-features">
+                            <li>500L - 5000L capacity options</li>
+                            <li>Space-saving designs</li>
+                            <li>Easy DIY installation</li>
+                            <li>Smart monitoring compatible</li>
+                        </ul>
+                        <a href="#" class="btn">View Options</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img" style="background-image: url('P2.avif');"></div>
+                    <div class="product-content">
+                        <h3>Apartment Systems</h3>
+                        <p>Shared solutions for multi-unit buildings.</p>
+                        <ul class="product-features">
+                            <li>10,000L - 50,000L capacity</li>
+                            <li>Community water sharing</li>
+                            <li>Building-integrated designs</li>
+                            <li>Automated distribution</li>
+                        </ul>
+                        <a href="#" class="btn">View Options</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img" style="background-image: url('p3.webp');"></div>
+                    <div class="product-content">
+                        <h3>Commercial Systems</h3>
+                        <p>Scalable solutions for offices and institutions.</p>
+                        <ul class="product-features">
+                            <li>50,000L+ capacity</li>
+                            <li>Industrial-grade filtration</li>
+                            <li>Custom configurations</li>
+                            <li>Enterprise monitoring</li>
+                        </ul>
+                        <a href="#" class="btn">View Options</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="section how-it-works">
+        <div class="container">
+            <div class="section-title">
+                <h2>How RainDrops Works</h2>
+                <p>Our four-step process makes rainwater harvesting simple and effective for urban environments.</p>
+            </div>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Rain Capture</h3>
+                    <p>Specialized catchment surfaces collect rainwater from rooftops and other impervious surfaces.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Filtration</h3>
+                    <p>Multi-stage filtration removes debris and contaminants before storage.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Smart Storage</h3>
+                    <p>Water is stored in our insulated, UV-protected vaults with real-time monitoring.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Usage</h3>
+                    <p>Clean water is available for irrigation, cleaning, toilet flushing, and more.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Smart Features Section -->
+    <section class="section smart-features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Smart Water Management</h2>
+                <p>Our IoT-enabled systems give you complete control and visibility of your water resources.</p>
+            </div>
+            
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <h3><i class="fas fa-bell"></i> Overflow Alerts</h3>
+                    <p>Get notified before your storage reaches capacity, with automatic diversion options.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <h3><i class="fas fa-chart-line"></i> Usage Analytics</h3>
+                    <p>Track your water consumption patterns and identify savings opportunities.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <h3><i class="fas fa-flask"></i> Water Quality</h3>
+                    <p>Continuous monitoring of pH, turbidity, and contaminants ensures water safety.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <h3><i class="fas fa-cloud"></i> Weather Integration</h3>
+                    <p>System adjusts storage based on forecasted rainfall to optimize capacity.</p>
+                </div>
+            </div>
+            
+            <div class="app-showcase">
+                <div class="app-demo">
+                    <img src="p4.webp" alt="RainDrops Mobile App">
+                </div>
+                <div class="app-features">
+                    <div class="app-feature">
+                        <h4><i class="fas fa-mobile-alt"></i> Mobile Control</h4>
+                        <p>Manage your system from anywhere with our intuitive iOS and Android app.</p>
+                    </div>
+                    
+                    <div class="app-feature">
+                        <h4><i class="fas fa-robot"></i> Automation</h4>
+                        <p>Set rules for automatic water distribution based on time, weather, or usage.</p>
+                    </div>
+                    
+                    <div class="app-feature">
+                        <h4><i class="fas fa-share-alt"></i> Integration</h4>
+                        <p>Works with smart home systems like Google Home, Alexa, and Apple HomeKit.</p>
+                    </div>
+                    
+                    <div class="app-feature">
+                        <h4><i class="fas fa-tools"></i> Maintenance Alerts</h4>
+                        <p>Get reminders for filter changes and system check-ups.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sustainability Impact Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Sustainability Impact</h2>
+                <p>Every RainDrops system contributes to water conservation and a healthier urban environment.</p>
+            </div>
+            
+            <div class="impact-stats">
+                <div class="stat-card">
+                    <div class="stat-number" id="waterSaved">12,758,941</div>
+                    <div class="stat-label">Liters of Water Saved</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-number" id="co2Reduced">1,284</div>
+                    <div class="stat-label">Tons of CO₂ Reduced</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-number" id="systemsInstalled">3,217</div>
+                    <div class="stat-label">Systems Installed</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-number" id="citiesServed">48</div>
+                    <div class="stat-label">Cities Served</div>
+                </div>
+            </div>
+            
+            <div class="testimonials">
+                <div class="section-title">
+                    <h2>What Our Customers Say</h2>
+                </div>
+                
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"Our apartment building reduced water bills by 40% after installing RainDrops. The smart features make maintenance a breeze."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <img src="p5.webp" alt="Sarah J.">
+                            </div>
+                            <div class="author-info">
+                                <h4>Sarah J.</h4>
+                                <p>Property Manager, Chicago</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"As a sustainability consultant, I recommend RainDrops to all my urban clients. The data reporting helps track impact for LEED certification."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <img src="p6.webp" alt="Michael T.">
+                            </div>
+                            <div class="author-info">
+                                <h4>Michael T.</h4>
+                                <p>Green Building Consultant, Seattle</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"Our school's rainwater system has become an educational tool. Students monitor usage and learn about water conservation firsthand."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <img src="p7.avif" alt="Dr. Lisa M.">
+                            </div>
+                            <div class="author-info">
+                                <h4>Dr. Lisa M.</h4>
+                                <p>School Principal, Austin</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section-title">
+                <h2>Certifications & Partnerships</h2>
+            </div>
+            
+            <div class="certifications">
+                <img src="https://via.placeholder.com/150x60" alt="LEED Certified" class="certification-logo">
+                <img src="https://via.placeholder.com/150x60" alt="Green Building Council" class="certification-logo">
+                <img src="https://via.placeholder.com/150x60" alt="WaterSense" class="certification-logo">
+                <img src="https://via.placeholder.com/150x60" alt="B Corp" class="certification-logo">
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Latest from Our Blog</h2>
+                <p>Resources and insights on urban water conservation and smart technology.</p>
+            </div>
+            
+            <div class="blog-preview">
+                <div class="blog-grid">
+                    <div class="blog-card">
+                        <div class="blog-img" style="background-image: url('p5.webp');"></div>
+                        <div class="blog-content">
+                            <div class="blog-date">June 15, 2023</div>
+                            <h3>How Cities Are Adapting to Water Scarcity</h3>
+                            <p>Explore innovative urban water management strategies from around the world.</p>
+                            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="blog-card">
+                        <div class="blog-img" style="background-image: url('p6.webp');"></div>
+                        <div class="blog-content">
+                            <div class="blog-date">May 28, 2023</div>
+                            <h3>Smart Home Water Integration Guide</h3>
+                            <p>Connect your RainDrops system with other smart home devices for maximum efficiency.</p>
+                            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="blog-card">
+                        <div class="blog-img" style="background-image: url('p7.avif');"></div>
+                        <div class="blog-content">
+                            <div class="blog-date">May 10, 2023</div>
+                            <h3>Government Incentives for Rainwater Harvesting</h3>
+                            <p>Tax credits and rebates available in your area for sustainable water solutions.</p>
+                            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Future-Proof Your Water Supply?</h2>
+            <p>Join thousands of urban dwellers and businesses who are taking control of their water resources with RainDrops smart systems.</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn">Get a Quote</a>
+                <a href="#" class="btn btn-outline">Schedule a Free Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section class="section" id="calculator">
+        <div class="container">
+            <div class="section-title">
+                <h2>Rainwater Savings Calculator</h2>
+                <p>Discover how much water you could harvest based on your rooftop size and local rainfall.</p>
+            </div>
+            
+            <div class="calculator">
+                <h3>Estimate Your Potential Savings</h3>
+                <form id="rainCalculator">
+                    <div class="form-group">
+                        <label for="roofArea">Rooftop Area (square meters)</label>
+                        <input type="number" id="roofArea" placeholder="Enter your rooftop area" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="rainfall">Average Annual Rainfall (mm)</label>
+                        <input type="number" id="rainfall" placeholder="Enter local rainfall" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="runoffCoefficient">Surface Type</label>
+                        <select id="runoffCoefficient" required>
+                            <option value="0.9">Metal Roof (90% efficiency)</option>
+                            <option value="0.8" selected>Tile Roof (80% efficiency)</option>
+                            <option value="0.7">Concrete Surface (70% efficiency)</option>
+                            <option value="0.6">Green Roof (60% efficiency)</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="btn" style="width: 100%;">Calculate</button>
+                    
+                    <div class="calculator-result" id="calculatorResult" style="display: none;">
+                        <h4>Potential Annual Water Harvest</h4>
+                        <div class="result-value" id="resultValue">0</div>
+                        <p>liters per year</p>
+                        <p>That's enough water for <span id="equivalentValue">0</span> days of average household use!</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="section partners">
+        <div class="container">
+            <div class="section-title">
+                <h2>Municipal & Corporate Partners</h2>
+                <p>We work with cities and organizations to implement large-scale water sustainability initiatives.</p>
+            </div>
+            
+            <div class="partner-logos">
+                <img src="https://via.placeholder.com/150x60" alt="City of Portland" class="partner-logo">
+                <img src="https://via.placeholder.com/150x60" alt="Google Sustainability" class="partner-logo">
+                <img src="https://via.placeholder.com/150x60" alt="Urban Green Council" class="partner-logo">
+                <img src="https://via.placeholder.com/150x60" alt="AWS Sustainability" class="partner-logo">
+                <img src="https://via.placeholder.com/150x60" alt="City of Austin" class="partner-logo">
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Satisfaction -->
+    <section class="satisfaction">
+        <div class="container">
+            <p>At RainDrops, customer satisfaction is our top priority. Our systems come with a 10-year warranty and 24/7 support to ensure your complete peace of mind.</p>
+        </div>
+    </section>
+
+    <!-- Disclaimer -->
+    <section class="container">
+        <div class="disclaimer">
+            <p><strong>Disclaimer:</strong> Actual water savings may vary based on installation, usage patterns, and local conditions. RainDrops systems are designed for non-potable water uses unless equipped with additional purification systems. Check local regulations regarding rainwater harvesting in your area.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-col">
+                <h3>RainDrops</h3>
+                <p>Smart rainwater solutions for the modern city. Sustainable, efficient, and future-ready water management systems.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="solutions.html">Solutions</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Support</h3>
+                <ul class="footer-links">
+                    <li><a href="faq.html">FAQs</a></li>
+                    <li><a href="installation.html">Installation Guides</a></li>
+                    <li><a href="maintenance.html">Maintenance Tips</a></li>
+                    <li><a href="warranty.html">Warranty Info</a></li>
+                    <li><a href="support.html">Technical Support</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+                <ul class="contact-info">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>123 Water Way, Suite 100<br>Portland, OR 97201</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone-alt"></i>
+                        <span>1-800-RAIN-DROP</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span>info@raindrops.com</span>
+                    </li>
+                </ul>
+                
+                <h3>Newsletter</h3>
+                <p>Stay updated on urban water innovations and product news.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address">
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container footer-bottom-container">
+                <div class="copyright">
+                    &copy; 2023 RainDrops Inc. All rights reserved.
+                </div>
+                <div class="legal-links">
+                    <a href="privacy.html" tabindex="0">Privacy Policy</a>
+                    <a href="terms.html" tabindex="0" aria-current="page">Terms & Conditions</a>
+                    <a href="cookies.html" tabindex="0">Cookie Policy</a>
+                    <a href="accessibility.html">Accessibility</a>
+                    <a href="sitemap.html">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Animated Counter for Impact Stats
+        function animateValue(id, start, end, duration) {
+            const obj = document.getElementById(id);
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                const value = Math.floor(progress * (end - start) + start);
+                obj.innerHTML = value.toLocaleString();
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
+        
+        // Initialize counters when section is in view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateValue('waterSaved', 0, 12758941, 2000);
+                    animateValue('co2Reduced', 0, 1284, 2000);
+                    animateValue('systemsInstalled', 0, 3217, 2000);
+                    animateValue('citiesServed', 0, 48, 2000);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {threshold: 0.5});
+        
+        observer.observe(document.querySelector('.impact-stats'));
+        
+        // Rainwater Calculator
+        document.getElementById('rainCalculator').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const roofArea = parseFloat(document.getElementById('roofArea').value);
+            const rainfall = parseFloat(document.getElementById('rainfall').value);
+            const runoffCoefficient = parseFloat(document.getElementById('runoffCoefficient').value);
+            
+            // Formula: Annual harvest (liters) = Roof area (m²) × Rainfall (mm) × Runoff coefficient
+            const annualHarvest = Math.round(roofArea * rainfall * runoffCoefficient);
+            
+            // Average household uses 300 liters per day
+            const equivalentDays = Math.round(annualHarvest / 300);
+            
+            document.getElementById('resultValue').textContent = annualHarvest.toLocaleString();
+            document.getElementById('equivalentValue').textContent = equivalentDays.toLocaleString();
+            document.getElementById('calculatorResult').style.display = 'block';
+            
+            // Scroll to results
+            document.getElementById('calculatorResult').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        });
+        
+        // Dark Mode Toggle
+        const darkModeToggle = document.createElement('button');
+        darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        darkModeToggle.style.position = 'fixed';
+        darkModeToggle.style.bottom = '20px';
+        darkModeToggle.style.right = '20px';
+        darkModeToggle.style.width = '50px';
+        darkModeToggle.style.height = '50px';
+        darkModeToggle.style.borderRadius = '50%';
+        darkModeToggle.style.backgroundColor = 'var(--deep-blue)';
+        darkModeToggle.style.color = 'white';
+        darkModeToggle.style.border = 'none';
+        darkModeToggle.style.cursor = 'pointer';
+        darkModeToggle.style.boxShadow = '0 2px 10px rgba(0,0,0,0.2)';
+        darkModeToggle.style.zIndex = '1000';
+        darkModeToggle.style.display = 'flex';
+        darkModeToggle.style.justifyContent = 'center';
+        darkModeToggle.style.alignItems = 'center';
+        darkModeToggle.style.fontSize = '1.2rem';
+        
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            darkModeToggle.innerHTML = document.body.classList.contains('dark-mode') ? 
+                '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+        });
+        
+        document.body.appendChild(darkModeToggle);
+    </script>
+</body>
+</html>

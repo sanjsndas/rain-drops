@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms & Conditions | RainDrops - Smart Rainwater Solutions</title>
+    <style>
+        /* Global Styles */
+        :root {
+            --deep-blue: #1a4b8c;
+            --aqua-green: #2ec4b6;
+            --light-gray: #f8f9fa;
+            --dark-gray: #343a40;
+            --white: #ffffff;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light-gray);
+            color: var(--dark-gray);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .logo h1 {
+            color: var(--deep-blue);
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .logo span {
+            color: var(--aqua-green);
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--dark-gray);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            margin: 0 5px;
+            font-weight: 500;
+            transition: var(--transition);
+            border-radius: 4px;
+        }
+
+        .nav-links a:hover, .nav-links a:focus {
+            background-color: var(--aqua-green);
+            color: var(--white);
+        }
+
+        .nav-links a[aria-current="page"] {
+            background-color: var(--deep-blue);
+            color: var(--white);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--deep-blue);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(26, 75, 140, 0.8), rgba(46, 196, 182, 0.8)), 
+                        url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        /* Terms Content */
+        .terms-content {
+            background-color: var(--white);
+            padding: 4rem 0;
+        }
+
+        .terms-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .terms-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .terms-header h1 {
+            color: var(--deep-blue);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .terms-header p {
+            color: var(--dark-gray);
+            font-size: 1.1rem;
+        }
+
+        .last-updated {
+            text-align: center;
+            font-style: italic;
+            margin-bottom: 2rem;
+            color: var(--dark-gray);
+        }
+
+        .terms-section {
+            margin-bottom: 3rem;
+        }
+
+        .terms-section h2 {
+            color: var(--deep-blue);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            border-bottom: 2px solid var(--aqua-green);
+            padding-bottom: 0.5rem;
+        }
+
+        .terms-section h3 {
+            color: var(--deep-blue);
+            margin: 2rem 0 1rem;
+            font-size: 1.4rem;
+        }
+
+        .terms-section p {
+            margin-bottom: 1.2rem;
+            line-height: 1.7;
+        }
+
+        .terms-section ul {
+            margin-bottom: 2rem;
+            padding-left: 2rem;
+        }
+
+        .terms-section li {
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        .highlight-box {
+            background-color: var(--light-gray);
+            border-left: 4px solid var(--aqua-green);
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-gray);
+            color: var(--white);
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h3 {
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            position: relative;
+        }
+
+        .footer-col h3::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 50px;
+            height: 2px;
+            background-color: var(--aqua-green);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: #b1b1b1;
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-block;
+        }
+
+        .footer-links a:hover {
+            color: var(--aqua-green);
+            transform: translateX(5px);
+        }
+
+        .contact-info {
+            list-style: none;
+        }
+
+        .contact-info li {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .contact-info i {
+            color: var(--aqua-green);
+            margin-right: 10px;
+            margin-top: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--white);
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--aqua-green);
+            transform: translateY(-5px);
+        }
+
+        .newsletter-form {
+            display: flex;
+            margin-top: 1.5rem;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 4px 0 0 4px;
+            font-size: 1rem;
+        }
+
+        .newsletter-form button {
+            background-color: var(--aqua-green);
+            color: var(--white);
+            border: none;
+            padding: 0 1.5rem;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .newsletter-form button:hover {
+            background-color: var(--deep-blue);
+        }
+
+        /* Footer Bottom */
+        .footer-bottom {
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+
+        .footer-bottom-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .copyright {
+            margin-bottom: 1rem;
+            color: #b1b1b1;
+        }
+
+        .legal-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .legal-links a {
+            color: #b1b1b1;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .legal-links a:hover {
+            color: var(--aqua-green);
+        }
+
+        /* Dark Mode */
+        .dark-mode {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        .dark-mode .terms-content {
+            background-color: #1e1e1e;
+        }
+
+        .dark-mode .terms-section h2,
+        .dark-mode .terms-section h3 {
+            color: var(--aqua-green);
+        }
+
+        .dark-mode .highlight-box {
+            background-color: #2d2d2d;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+
+            .header-container {
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            .logo {
+                margin-bottom: 1rem;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+                display: none;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                margin: 0.2rem 0;
+                padding: 0.8rem;
+                text-align: center;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+            }
+
+            .hero {
+                height: auto;
+                padding: 4rem 0;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .terms-header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <h1>Rain<span>Drops</span></h1>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html" aria-current="page">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Terms & Conditions</h2>
+            <p>Please read these terms carefully before using our website or services.</p>
+        </div>
+    </section>
+
+    <!-- Terms Content -->
+    <section class="terms-content">
+        <div class="container terms-container">
+            <div class="terms-header">
+                <h1>RainDrops Terms & Conditions</h1>
+                <p>These Terms & Conditions govern your use of our website and services. By accessing or using our services, you agree to be bound by these terms.</p>
+            </div>
+
+            <div class="last-updated">
+                <p>Last Updated: June 15, 2023</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>1. Acceptance of Terms</h2>
+                <p>By accessing or using the RainDrops website, mobile applications, products, or services (collectively, the "Services"), you agree to be bound by these Terms & Conditions ("Terms"). If you do not agree to all of these Terms, do not use our Services.</p>
+                
+                <div class="highlight-box">
+                    <p><strong>Key Point:</strong> Your use of our Services constitutes acceptance of these Terms. We may modify these Terms at any time, and continued use constitutes acceptance of the modified Terms.</p>
+                </div>
+            </div>
+
+            <div class="terms-section">
+                <h2>2. Description of Services</h2>
+                <p>RainDrops provides smart rainwater harvesting solutions including:</p>
+                
+                <ul>
+                    <li>Residential, commercial, and municipal rainwater collection systems</li>
+                    <li>Smart monitoring and control technology</li>
+                    <li>Installation services and maintenance plans</li>
+                    <li>Educational resources and water conservation tools</li>
+                    <li>Mobile applications for system management</li>
+                </ul>
+                
+                <p>We reserve the right to modify or discontinue any Service at any time without notice.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>3. User Accounts</h2>
+                <p>To access certain Services, you may be required to create an account. You agree to:</p>
+                
+                <ul>
+                    <li>Provide accurate, current, and complete information during registration</li>
+                    <li>Maintain and promptly update your account information</li>
+                    <li>Maintain the security of your password and accept all risks of unauthorized access</li>
+                    <li>Notify us immediately of any unauthorized use of your account</li>
+                    <li>Be responsible for all activities that occur under your account</li>
+                </ul>
+                
+                <p>We reserve the right to refuse service, terminate accounts, or remove content at our sole discretion.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>4. Purchases and Payments</h2>
+                <p>All purchases through our Services are subject to the following terms:</p>
+                
+                <h3>4.1 Pricing</h3>
+                <ul>
+                    <li>All prices are in U.S. dollars unless otherwise stated</li>
+                    <li>Prices are subject to change without notice</li>
+                    <li>We are not responsible for typographical errors in pricing</li>
+                </ul>
+                
+                <h3>4.2 Payment</h3>
+                <ul>
+                    <li>Payment must be made by valid credit card or other approved payment method</li>
+                    <li>You authorize us to charge your payment method for all purchases</li>
+                    <li>Sales tax will be added where applicable</li>
+                </ul>
+                
+                <h3>4.3 Order Acceptance</h3>
+                <p>Your order constitutes an offer to purchase. We reserve the right to refuse or cancel any order for any reason, including limitations on quantities available for purchase, inaccuracies, or errors in product or pricing information.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>5. Shipping and Delivery</h2>
+                <p>For physical product purchases:</p>
+                
+                <ul>
+                    <li>Shipping costs will be displayed during checkout</li>
+                    <li>Delivery times are estimates only and not guaranteed</li>
+                    <li>Risk of loss passes to you upon delivery to the carrier</li>
+                    <li>We are not responsible for delays caused by events beyond our control</li>
+                    <li>Some products may require professional installation</li>
+                </ul>
+            </div>
+
+            <div class="terms-section">
+                <h2>6. Returns and Refunds</h2>
+                <p>Our return policy is as follows:</p>
+                
+                <ul>
+                    <li>Returns must be initiated within 30 days of delivery</li>
+                    <li>Products must be in original condition with all packaging</li>
+                    <li>Custom or special order items may not be returnable</li>
+                    <li>Refunds will be issued to the original payment method</li>
+                    <li>Shipping costs are non-refundable</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <p><strong>Important:</strong> Some products may have different return policies as specified at purchase. Installation services are non-refundable once scheduled.</p>
+                </div>
+            </div>
+
+            <div class="terms-section">
+                <h2>7. Warranties</h2>
+                <p>RainDrops provides the following warranties:</p>
+                
+                <h3>7.1 Product Warranty</h3>
+                <p>Our products are covered by a limited warranty against defects in materials and workmanship for the period specified in your product documentation (typically 5-10 years). This warranty does not cover damage caused by:</p>
+                
+                <ul>
+                    <li>Improper installation, maintenance, or use</li>
+                    <li>Accident, abuse, or misuse</li>
+                    <li>Natural disasters or extreme weather conditions</li>
+                    <li>Unauthorized modifications or repairs</li>
+                </ul>
+                
+                <h3>7.2 Service Warranty</h3>
+                <p>Installation services are warranted against defects in workmanship for 1 year from completion. This does not cover issues arising from:</p>
+                
+                <ul>
+                    <li>Pre-existing conditions at the installation site</li>
+                    <li>Changes made after our installation</li>
+                    <li>Normal wear and tear</li>
+                </ul>
+                
+                <h3>7.3 Disclaimer</h3>
+                <p>EXCEPT AS EXPRESSLY PROVIDED HEREIN, ALL PRODUCTS AND SERVICES ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>8. Limitation of Liability</h2>
+                <p>To the maximum extent permitted by law:</p>
+                
+                <ul>
+                    <li>RainDrops shall not be liable for any indirect, incidental, special, consequential, or punitive damages</li>
+                    <li>Our total liability for any claims related to the Services shall not exceed the amount you paid for the Services in the 12 months preceding the claim</li>
+                    <li>We are not liable for any failure or delay due to matters beyond our reasonable control</li>
+                    <li>Some jurisdictions do not allow the exclusion or limitation of liability, so these limitations may not apply to you</li>
+                </ul>
+            </div>
+
+            <div class="terms-section">
+                <h2>9. Intellectual Property</h2>
+                <p>All content included in or made available through our Services, including text, graphics, logos, images, software, and designs, is the property of RainDrops or its content suppliers and protected by intellectual property laws.</p>
+                
+                <h3>9.1 License</h3>
+                <p>We grant you a limited, non-exclusive, non-transferable license to access and use our Services for personal, non-commercial purposes. This license does not include:</p>
+                
+                <ul>
+                    <li>Resale or commercial use of our Services</li>
+                    <li>Collection and use of product listings or descriptions</li>
+                    <li>Downloading or copying of account information</li>
+                    <li>Use of data mining or similar data gathering tools</li>
+                </ul>
+                
+                <h3>9.2 Restrictions</h3>
+                <p>You may not:</p>
+                
+                <ul>
+                    <li>Modify, copy, reproduce, republish, upload, post, transmit, or distribute our content</li>
+                    <li>Reverse engineer, decompile, or disassemble any software</li>
+                    <li>Remove any copyright or proprietary notices</li>
+                    <li>Use our trademarks without written permission</li>
+                </ul>
+            </div>
+
+            <div class="terms-section">
+                <h2>10. User Content</h2>
+                <p>Our Services may allow you to post, upload, or submit content ("User Content"). You retain ownership of your User Content, but by submitting it, you grant us a worldwide, royalty-free license to use, modify, display, and distribute it in connection with our Services.</p>
+                
+                <p>You agree not to submit User Content that:</p>
+                
+                <ul>
+                    <li>Violates any law or infringes any third-party rights</li>
+                    <li>Is defamatory, obscene, or offensive</li>
+                    <li>Contains viruses or malicious code</li>
+                    <li>Contains unauthorized advertising</li>
+                </ul>
+                
+                <p>We reserve the right to remove any User Content at our discretion.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>11. Prohibited Conduct</h2>
+                <p>When using our Services, you agree not to:</p>
+                
+                <ul>
+                    <li>Violate any laws or regulations</li>
+                    <li>Infringe on the rights of others</li>
+                    <li>Interfere with or disrupt the Services</li>
+                    <li>Attempt to gain unauthorized access to our systems</li>
+                    <li>Use automated systems to access our Services</li>
+                    <li>Impersonate any person or entity</li>
+                    <li>Engage in fraudulent activity</li>
+                    <li>Harass or harm others</li>
+                </ul>
+            </div>
+
+            <div class="terms-section">
+                <h2>12. Third-Party Links</h2>
+                <p>Our Services may contain links to third-party websites or services. We are not responsible for:</p>
+                
+                <ul>
+                    <li>The content or accuracy of third-party sites</li>
+                    <li>The privacy practices of third parties</li>
+                    <li>Any damage or loss caused by third-party products or services</li>
+                </ul>
+                
+                <p>Links do not imply our endorsement unless expressly stated.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>13. Mobile Services</h2>
+                <p>Our mobile applications and services are subject to the following additional terms:</p>
+                
+                <ul>
+                    <li>You are responsible for any mobile carrier charges</li>
+                    <li>We are not responsible for app store policies or issues</li>
+                    <li>Some features may require location services to be enabled</li>
+                    <li>Mobile alerts may be sent if you opt-in</li>
+                </ul>
+            </div>
+
+            <div class="terms-section">
+                <h2>14. Termination</h2>
+                <p>We may terminate or suspend your access to our Services at any time, without notice, for any reason, including:</p>
+                
+                <ul>
+                    <li>Violation of these Terms</li>
+                    <li>Requests by law enforcement</li>
+                    <li>Technical or security issues</li>
+                    <li>Discontinuation of the Services</li>
+                </ul>
+                
+                <p>Upon termination, your right to use the Services will immediately cease.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>15. Dispute Resolution</h2>
+                <p>Any disputes arising from these Terms or your use of our Services shall be resolved as follows:</p>
+                
+                <h3>15.1 Informal Resolution</h3>
+                <p>We strongly encourage you to contact us first to attempt to resolve any dispute informally.</p>
+                
+                <h3>15.2 Binding Arbitration</h3>
+                <p>If informal resolution fails, any dispute shall be resolved through binding arbitration in Portland, Oregon under the rules of the American Arbitration Association.</p>
+                
+                <h3>15.3 Class Action Waiver</h3>
+                <p>You may only resolve disputes with us on an individual basis and may not bring a claim as a plaintiff or class member in any class or representative action.</p>
+                
+                <h3>15.4 Governing Law</h3>
+                <p>These Terms shall be governed by the laws of the State of Oregon without regard to conflict of law provisions.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>16. Changes to Terms</h2>
+                <p>We may modify these Terms at any time. We will notify you of material changes through our website or by email. Your continued use of our Services after changes constitutes acceptance of the new Terms.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>17. Miscellaneous</h2>
+                
+                <h3>17.1 Entire Agreement</h3>
+                <p>These Terms constitute the entire agreement between you and RainDrops regarding our Services.</p>
+                
+                <h3>17.2 Waiver</h3>
+                <p>Our failure to enforce any right or provision will not be considered a waiver of those rights.</p>
+                
+                <h3>17.3 Severability</h3>
+                <p>If any provision is found to be invalid, the remaining provisions will remain in full effect.</p>
+                
+                <h3>17.4 Assignment</h3>
+                <p>You may not assign these Terms without our written consent. We may assign our rights without restriction.</p>
+                
+                <h3>17.5 Force Majeure</h3>
+                <p>We are not liable for any failure due to events beyond our reasonable control.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>18. Contact Information</h2>
+                <p>For questions about these Terms, please contact us:</p>
+                
+                <p><strong>Email:</strong> legal@raindrops.com</p>
+                <p><strong>Mail:</strong> Legal Department, RainDrops Inc., 123 Water Way, Suite 100, Portland, OR 97201</p>
+                <p><strong>Phone:</strong> 1-800-RAIN-DROP (1-800-724-6376)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-col">
+                <h3>RainDrops</h3>
+                <p>Smart rainwater solutions for the modern city. Sustainable, efficient, and future-ready water management systems.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="solutions.html">Solutions</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Support</h3>
+                <ul class="footer-links">
+                    <li><a href="faq.html">FAQs</a></li>
+                    <li><a href="installation.html">Installation Guides</a></li>
+                    <li><a href="maintenance.html">Maintenance Tips</a></li>
+                    <li><a href="warranty.html">Warranty Info</a></li>
+                    <li><a href="support.html">Technical Support</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+                <ul class="contact-info">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>123 Water Way, Suite 100<br>Portland, OR 97201</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone-alt"></i>
+                        <span>1-800-RAIN-DROP<br>(1-800-724-6376)</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span>info@raindrops.com</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-clock"></i>
+                        <span>Monday-Friday: 9AM-6PM PST</span>
+                    </li>
+                </ul>
+                
+                <h3>Newsletter</h3>
+                <p>Stay updated on urban water innovations and product news.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address">
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container footer-bottom-container">
+                <div class="copyright">
+                    &copy; 2023 RainDrops Inc. All rights reserved.
+                </div>
+                <div class="legal-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html" aria-current="page">Terms & Conditions</a>
+                    <a href="cookies.html">Cookie Policy</a>
+                    <a href="accessibility.html">Accessibility</a>
+                    <a href="sitemap.html">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Dark Mode Toggle
+        const darkModeToggle = document.createElement('button');
+        darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        darkModeToggle.style.position = 'fixed';
+        darkModeToggle.style.bottom = '20px';
+        darkModeToggle.style.right = '20px';
+        darkModeToggle.style.width = '50px';
+        darkModeToggle.style.height = '50px';
+        darkModeToggle.style.borderRadius = '50%';
+        darkModeToggle.style.backgroundColor = 'var(--deep-blue)';
+        darkModeToggle.style.color = 'white';
+        darkModeToggle.style.border = 'none';
+        darkModeToggle.style.cursor = 'pointer';
+        darkModeToggle.style.boxShadow = '0 2px 10px rgba(0,0,0,0.2)';
+        darkModeToggle.style.zIndex = '1000';
+        darkModeToggle.style.display = 'flex';
+        darkModeToggle.style.justifyContent = 'center';
+        darkModeToggle.style.alignItems = 'center';
+        darkModeToggle.style.fontSize = '1.2rem';
+        
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            darkModeToggle.innerHTML = document.body.classList.contains('dark-mode') ? 
+                '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+        });
+        
+        document.body.appendChild(darkModeToggle);
+    </script>
+</body>
+</html>

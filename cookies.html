@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Policy | RainDrops - Smart Rainwater Solutions</title>
+    <style>
+        /* Global Styles */
+        :root {
+            --deep-blue: #1a4b8c;
+            --aqua-green: #2ec4b6;
+            --light-gray: #f8f9fa;
+            --dark-gray: #343a40;
+            --white: #ffffff;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light-gray);
+            color: var(--dark-gray);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .logo h1 {
+            color: var(--deep-blue);
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .logo span {
+            color: var(--aqua-green);
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--dark-gray);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            margin: 0 5px;
+            font-weight: 500;
+            transition: var(--transition);
+            border-radius: 4px;
+        }
+
+        .nav-links a:hover, .nav-links a:focus {
+            background-color: var(--aqua-green);
+            color: var(--white);
+        }
+
+        .nav-links a[aria-current="page"] {
+            background-color: var(--deep-blue);
+            color: var(--white);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--deep-blue);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(26, 75, 140, 0.8), rgba(46, 196, 182, 0.8)), 
+                        url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        /* Cookie Policy Content */
+        .cookies-content {
+            background-color: var(--white);
+            padding: 4rem 0;
+        }
+
+        .cookies-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .cookies-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .cookies-header h1 {
+            color: var(--deep-blue);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cookies-header p {
+            color: var(--dark-gray);
+            font-size: 1.1rem;
+        }
+
+        .last-updated {
+            text-align: center;
+            font-style: italic;
+            margin-bottom: 2rem;
+            color: var(--dark-gray);
+        }
+
+        .cookies-section {
+            margin-bottom: 3rem;
+        }
+
+        .cookies-section h2 {
+            color: var(--deep-blue);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            border-bottom: 2px solid var(--aqua-green);
+            padding-bottom: 0.5rem;
+        }
+
+        .cookies-section h3 {
+            color: var(--deep-blue);
+            margin: 2rem 0 1rem;
+            font-size: 1.4rem;
+        }
+
+        .cookies-section p {
+            margin-bottom: 1.2rem;
+            line-height: 1.7;
+        }
+
+        .cookies-section ul {
+            margin-bottom: 2rem;
+            padding-left: 2rem;
+        }
+
+        .cookies-section li {
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        .highlight-box {
+            background-color: var(--light-gray);
+            border-left: 4px solid var(--aqua-green);
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+        }
+
+        .contact-point {
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .contact-point h4 {
+            color: var(--deep-blue);
+            margin-bottom: 0.8rem;
+            font-size: 1.2rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-gray);
+            color: var(--white);
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h3 {
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            position: relative;
+        }
+
+        .footer-col h3::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 50px;
+            height: 2px;
+            background-color: var(--aqua-green);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: #b1b1b1;
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-block;
+        }
+
+        .footer-links a:hover {
+            color: var(--aqua-green);
+            transform: translateX(5px);
+        }
+
+        .contact-info {
+            list-style: none;
+        }
+
+        .contact-info li {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .contact-info i {
+            color: var(--aqua-green);
+            margin-right: 10px;
+            margin-top: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--white);
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--aqua-green);
+            transform: translateY(-5px);
+        }
+
+        .newsletter-form {
+            display: flex;
+            margin-top: 1.5rem;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 4px 0 0 4px;
+            font-size: 1rem;
+        }
+
+        .newsletter-form button {
+            background-color: var(--aqua-green);
+            color: var(--white);
+            border: none;
+            padding: 0 1.5rem;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .newsletter-form button:hover {
+            background-color: var(--deep-blue);
+        }
+
+        /* Footer Bottom */
+        .footer-bottom {
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+
+        .footer-bottom-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .copyright {
+            margin-bottom: 1rem;
+            color: #b1b1b1;
+        }
+
+        .legal-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .legal-links a {
+            color: #b1b1b1;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .legal-links a:hover {
+            color: var(--aqua-green);
+        }
+
+        /* Cookie Consent Banner */
+        .cookie-consent {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: var(--dark-gray);
+            color: var(--white);
+            padding: 1.5rem;
+            z-index: 9999;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+
+        .cookie-consent.active {
+            display: block;
+        }
+
+        .cookie-consent-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .cookie-consent-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .cookie-consent-text p {
+            margin-bottom: 0;
+            line-height: 1.6;
+        }
+
+        .cookie-consent-text a {
+            color: var(--aqua-green);
+            text-decoration: underline;
+        }
+
+        .cookie-consent-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .cookie-btn {
+            padding: 0.6rem 1.2rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .cookie-btn-accept {
+            background-color: var(--aqua-green);
+            color: var(--white);
+            border: none;
+        }
+
+        .cookie-btn-decline {
+            background-color: transparent;
+            color: var(--white);
+            border: 1px solid var(--white);
+        }
+
+        .cookie-btn:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
+        /* Dark Mode */
+        .dark-mode {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        .dark-mode .cookies-content {
+            background-color: #1e1e1e;
+        }
+
+        .dark-mode .cookies-section h2,
+        .dark-mode .cookies-section h3 {
+            color: var(--aqua-green);
+        }
+
+        .dark-mode .highlight-box {
+            background-color: #2d2d2d;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+
+            .header-container {
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            .logo {
+                margin-bottom: 1rem;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+                display: none;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                margin: 0.2rem 0;
+                padding: 0.8rem;
+                text-align: center;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+            }
+
+            .hero {
+                height: auto;
+                padding: 4rem 0;
+            }
+
+            .cookie-consent-buttons {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .cookies-header h1 {
+                font-size: 2rem;
+            }
+
+            .cookie-consent-buttons {
+                flex-direction: column;
+            }
+
+            .cookie-btn {
+                width: 100%;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <h1>Rain<span>Drops</span></h1>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html" aria-current="page">Cookies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Cookie Policy</h2>
+            <p>Learn how we use cookies and similar technologies to enhance your experience on our website.</p>
+        </div>
+    </section>
+
+    <!-- Cookie Policy Content -->
+    <section class="cookies-content">
+        <div class="container cookies-container">
+            <div class="cookies-header">
+                <h1>RainDrops Cookie Policy</h1>
+                <p>This Cookie Policy explains what cookies are, how we use them, and how you can manage your cookie preferences.</p>
+            </div>
+
+            <div class="last-updated">
+                <p>Last Updated: June 15, 2023</p>
+            </div>
+
+            <div class="cookies-section">
+                <h2>1. Introduction</h2>
+                <p>RainDrops ("we," "our," or "us") uses cookies and similar tracking technologies on our website and mobile applications (collectively, the "Services"). This policy explains what these technologies are, why we use them, and your rights to control our use of them.</p>
+                
+                <div class="highlight-box">
+                    <p><strong>Key Point:</strong> Cookies are small data files that are placed on your device when you visit a website. They are widely used to make websites work more efficiently and to provide information to website owners.</p>
+                </div>
+            </div>
+
+            <div class="cookies-section">
+                <h2>2. What Are Cookies?</h2>
+                <p>Cookies are small text files that are stored on your computer or mobile device when you visit a website. They are widely used to enable websites to function properly, improve efficiency, and provide reporting information.</p>
+                
+                <h3>2.1 How Cookies Work</h3>
+                <p>When you visit our website, we may place cookies on your device. These cookies allow the website to remember your actions and preferences (such as login, language, font size, and other display preferences) over a period of time, so you don't have to keep re-entering them whenever you come back to the site or browse from one page to another.</p>
+                
+                <h3>2.2 Types of Data Collected</h3>
+                <p>Cookies may collect various types of information, including:</p>
+                <ul>
+                    <li>IP addresses</li>
+                    <li>Browser type and version</li>
+                    <li>Operating system</li>
+                    <li>Date and time of visits</li>
+                    <li>Pages viewed and time spent on pages</li>
+                    <li>Referring website addresses</li>
+                </ul>
+            </div>
+
+            <div class="cookies-section">
+                <h2>3. Types of Cookies We Use</h2>
+                <p>We use several types of cookies for different purposes:</p>
+                
+                <h3>3.1 Essential Cookies</h3>
+                <p>These cookies are necessary for the website to function and cannot be switched off in our systems. They are usually only set in response to actions made by you which amount to a request for services, such as setting your privacy preferences, logging in, or filling in forms.</p>
+                
+                <h3>3.2 Performance Cookies</h3>
+                <p>These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our site. They help us to know which pages are the most and least popular and see how visitors move around the site.</p>
+                
+                <h3>3.3 Functionality Cookies</h3>
+                <p>These cookies enable the website to provide enhanced functionality and personalization. They may be set by us or by third-party providers whose services we have added to our pages.</p>
+                
+                <h3>3.4 Targeting Cookies</h3>
+                <p>These cookies may be set through our site by our advertising partners. They may be used by those companies to build a profile of your interests and show you relevant advertisements on other sites.</p>
+            </div>
+
+            <div class="cookies-section">
+                <h2>4. Why We Use Cookies</h2>
+                <p>We use cookies for various purposes, including:</p>
+                
+                <ul>
+                    <li>To authenticate users and prevent fraudulent use of user accounts</li>
+                    <li>To remember your preferences and settings</li>
+                    <li>To analyze how our Services are used so we can improve them</li>
+                    <li>To deliver content tailored to your interests</li>
+                    <li>To measure the effectiveness of advertising campaigns</li>
+                    <li>To enable e-commerce functionality</li>
+                    <li>To provide social media features</li>
+                    <li>To collect analytics data to understand how visitors interact with our website</li>
+                </ul>
+            </div>
+
+            <div class="cookies-section">
+                <h2>5. Third-Party Cookies</h2>
+                <p>In addition to our own cookies, we may also use various third-party cookies to report usage statistics of the Services, deliver advertisements on and through the Services, and so on.</p>
+                
+                <h3>5.1 Analytics Cookies</h3>
+                <p>We use Google Analytics to help us understand how our customers use the site. You can read more about how Google uses your Personal Information here: https://policies.google.com/privacy?hl=en. You can also opt-out of Google Analytics here: https://tools.google.com/dlpage/gaoptout.</p>
+                
+                <h3>5.2 Advertising Cookies</h3>
+                <p>These cookies may be used by advertising companies to build a profile of your interests and show you relevant advertisements on other sites. They do not store directly personal information but are based on uniquely identifying your browser and internet device.</p>
+                
+                <h3>5.3 Social Media Cookies</h3>
+                <p>These cookies are set by a range of social media services that we have added to the site to enable you to share our content with your friends and networks. They are capable of tracking your browser across other sites and building up a profile of your interests.</p>
+            </div>
+
+            <div class="cookies-section">
+                <h2>6. Cookie Duration</h2>
+                <p>Cookies may be either "persistent" cookies or "session" cookies. A persistent cookie will be stored by a web browser and will remain valid until its set expiry date, unless deleted by the user before the expiry date. A session cookie will expire at the end of the user session, when the web browser is closed.</p>
+                
+                <h3>6.1 Session Cookies</h3>
+                <p>These temporary cookies remain on your device until you leave our website. They are essential for secure areas of the website and for the shopping cart functionality.</p>
+                
+                <h3>6.2 Persistent Cookies</h3>
+                <p>These cookies remain on your device for the period of time specified in the cookie. They are activated each time you visit the website that created that particular cookie.</p>
+            </div>
+
+            <div class="cookies-section">
+                <h2>7. Managing Cookies</h2>
+                <p>You have the right to decide whether to accept or reject cookies. You can exercise your cookie preferences by clicking on the appropriate opt-out links provided in this policy.</p>
+                
+                <h3>7.1 Browser Controls</h3>
+                <p>Most web browsers allow some control of most cookies through the browser settings. To find out more about cookies, including how to see what cookies have been set and how to manage and delete them, visit www.allaboutcookies.org.</p>
+                
+                <h3>7.2 Opting Out</h3>
+                <p>You can set or amend your web browser controls to accept or refuse cookies. If you choose to reject cookies, you may still use our website though your access to some functionality and areas of our website may be restricted.</p>
+                
+                <h3>7.3 Do Not Track Signals</h3>
+                <p>Some browsers have a "Do Not Track" feature that lets you tell websites that you do not want to have your online activities tracked. Our systems do not currently respond to Do Not Track (DNT) signals because no DNT standard has been adopted.</p>
+            </div>
+
+            <div class="cookies-section">
+                <h2>8. Specific Cookies We Use</h2>
+                <p>Below is a list of the specific cookies we use on our website:</p>
+                
+                <h3>8.1 Essential Website Cookies</h3>
+                <ul>
+                    <li><strong>session_id:</strong> Maintains your session state across page requests</li>
+                    <li><strong>auth_token:</strong> Identifies you as being logged in</li>
+                    <li><strong>consent:</strong> Stores your cookie consent preferences</li>
+                </ul>
+                
+                <h3>8.2 Analytics Cookies</h3>
+                <ul>
+                    <li><strong>_ga:</strong> Google Analytics - used to distinguish users</li>
+                    <li><strong>_gid:</strong> Google Analytics - used to distinguish users</li>
+                    <li><strong>_gat:</strong> Google Analytics - used to throttle request rate</li>
+                </ul>
+                
+                <h3>8.3 Advertising Cookies</h3>
+                <ul>
+                    <li><strong>fr:</strong> Facebook Pixel - used to deliver targeted advertising</li>
+                    <li><strong>_fbp:</strong> Facebook Pixel - identifies browser for conversion tracking</li>
+                    <li><strong>IDE:</strong> Google DoubleClick - used for remarketing</li>
+                </ul>
+            </div>
+
+            <div class="cookies-section">
+                <h2>9. Changes to This Policy</h2>
+                <p>We may update this Cookie Policy from time to time to reflect changes in technology, legislation, or our data use practices. We will notify you of any material changes by posting the new policy on our website with a new effective date.</p>
+            </div>
+
+            <div class="cookies-section">
+                <h2>10. Contact Information</h2>
+                <p>If you have any questions about our use of cookies or this Cookie Policy, please contact us:</p>
+                
+                <p><strong>Email:</strong> privacy@raindrops.com</p>
+                <p><strong>Mail:</strong> Data Protection Officer, RainDrops Inc., 123 Water Way, Suite 100, Portland, OR 97201</p>
+                <p><strong>Phone:</strong> 1-800-RAIN-DROP (1-800-724-6376)</p>
+            </div>
+
+            <div class="cookies-section">
+                <h2>11. Detailed Contact Points</h2>
+                
+                <div class="contact-point">
+                    <h4>1. Cookie Consent Management</h4>
+                    <p>Our cookie consent management system allows you to customize your cookie preferences at any time. You can access these settings through the cookie preferences link in our website footer. The system remembers your choices for future visits and provides transparency about what each cookie does. We regularly update our cookie list to ensure accuracy. If you change devices or browsers, you'll need to set your preferences again. Our system provides detailed information about cookie categories and purposes. You can opt-in or opt-out of different cookie types individually. The system automatically honors "Do Not Track" browser settings where applicable. We conduct regular audits to ensure compliance with your preferences. The system provides confirmation when your preferences are successfully saved.</p>
+                </div>
+                
+                <div class="contact-point">
+                    <h4>2. Technical Support for Cookie Issues</h4>
+                    <p>If you experience technical issues with our cookie functionality, our support team is available 24/7. Common issues include cookies not being set properly or preferences not being saved. Before contacting support, try clearing your browser cache and cookies. Ensure your browser is updated to the latest version. Check that you don't have third-party extensions blocking cookies. Our support team can guide you through browser-specific cookie settings. We maintain detailed logs to help diagnose cookie-related problems. For persistent issues, we may request screenshots of error messages. Our average response time for cookie-related support queries is under 2 hours. We document solutions to common problems in our knowledge base.</p>
+                </div>
+                
+                <div class="contact-point">
+                    <h4>3. Data Protection Officer Contact</h4>
+                    <p>Our Data Protection Officer (DPO) oversees all cookie-related data processing activities. You can contact the DPO directly for concerns about personal data in cookies. The DPO ensures our cookie practices comply with GDPR and other regulations. All DPO communications are confidential and given high priority. The DPO conducts regular cookie policy reviews and impact assessments. You can request information about data collected via specific cookies. The DPO maintains records of all cookie-related data processing activities. Complaints to the DPO are acknowledged within 48 hours. The DPO works with our engineering team to implement privacy by design. Annual reports on cookie usage are available upon request.</p>
+                </div>
+                
+                <div class="contact-point">
+                    <h4>4. Marketing Opt-Out Requests</h4>
+                    <p>To opt out of marketing cookies used for targeted advertising, use our preference center. We honor all opt-out requests within 10 business days. The opt-out process may require setting an opt-out cookie on your device. Some third-party networks require separate opt-outs on their platforms. We provide links to common advertising network opt-out pages. Even after opting out, you may see non-targeted ads. Your opt-out preferences are device and browser specific. We don't charge fees for processing opt-out requests. Our system confirms opt-out completion via email. Periodic reminders about opt-out options are sent to registered users.</p>
+                </div>
+                
+                <div class="contact-point">
+                    <h4>5. Analytics Data Access Requests</h4>
+                    <p>You can request access to personal data collected via analytics cookies. Requests must include sufficient identification information. We provide data in a commonly used machine-readable format. There's no fee for the first request each calendar year. Subsequent requests may incur reasonable processing fees. We verify identity before releasing any personal data. Data is typically provided within 30 days of verification. If additional time is needed, we'll notify you with reasons. Historical data may be available depending on retention periods. We explain how to interpret the provided analytics data.</p>
+                </div>
+                
+                <div class="contact-point">
+                    <h4>6. Cookie Policy Clarifications</h4>
+                    <p>Our customer service team can explain any aspect of this cookie policy. Common requests include clarification on specific cookie purposes. We provide plain-language explanations of technical terms. Policy explanations are available in multiple languages upon request. Our team can walk you through the policy section by section. We maintain a glossary of cookie-related terminology. Explanations include practical examples of cookie usage. Complex questions are escalated to our privacy team. Responses are tailored to your level of technical understanding. We document all policy clarifications for future reference.</p>
+                </div>
+                
+                <div class="contact-point">
+                    <h4>7. Cookie-Related Complaints</h4>
+                    <p>Formal complaints about our cookie practices can be submitted online or by mail. All complaints are logged and assigned a tracking number. We investigate complaints thoroughly and objectively. Typical resolution time is 30 days for complex issues. You'll receive regular updates during the investigation. If unsatisfied with our response, you may escalate to regulatory authorities. We maintain records of all complaints and resolutions. Complaint trends are analyzed quarterly for process improvements. Anonymous complaints are accepted but may limit our response options. Our goal is to resolve all complaints amicably and fairly.</p>
+                </div>
+                
+                <div class="contact-point">
+                    <h4>8. Business Partner Cookie Inquiries</h4>
+                    <p>Vendors and partners with questions about our cookie practices can contact our partnerships team. We provide technical specifications for first-party cookies. Partners must disclose any third-party cookies they wish to implement. All partner cookies undergo privacy impact assessments. We maintain a registry of approved partner cookies. Integration guidelines ensure compliance with our policies. Partners receive regular updates about cookie policy changes. Joint marketing initiatives require separate cookie disclosures. We conduct annual audits of partner cookie implementations. Partners must agree to our cookie standards in written contracts.</p>
+                </div>
+                
+                <div class="contact-point">
+                    <h4>9. Cookie Security Concerns</h4>
+                    <p>Report suspected cookie security issues to our cybersecurity team immediately. Common concerns include suspicious cookies from unknown domains. Our team investigates all reported security incidents. We monitor for cookie tampering and session hijacking attempts. Security patches affecting cookies are prioritized. Regular penetration tests include cookie vulnerability assessments. Bug bounty programs cover cookie-related security flaws. Critical vulnerabilities are addressed within 24 hours. We publish security advisories about significant cookie risks. Responsible disclosure guidelines protect reporters.</p>
+                </div>
+                
+                <div class="contact-point">
+                    <h4>10. Cookie Duration Inquiries</h4>
+                    <p>Information about specific cookie expiration periods is available upon request. We document the lifespan of all cookies we set. Session cookies expire when you close your browser. Persistent cookie durations vary by purpose and type. Some advertising cookies may persist for up to 2 years. You can request early expiration of persistent cookies. Our system automatically purges expired cookies. We review cookie durations annually for appropriateness. Extended durations require special approval. Technical limitations may affect actual cookie persistence.</p>
+                </div>
+                
+                <div class="contact-point">
+                    <h4>11. Third-Party Cookie Information</h4>
+                    <p>We maintain a current list of all third-party cookies used on our site. For each third-party cookie, we document its provider and purpose. Third-party cookie policies are linked from our disclosure. We vet all third-party cookie providers for compliance. Some third parties may collect data independently of our control. We negotiate data protection terms with third-party providers. You must contact third parties directly for certain requests. We periodically review third-party cookie necessity. Alternative solutions without third-party cookies are explored. Significant changes to third-party cookies trigger user notifications.</p>
+                </div>
+                
+                <div class="contact-point">
+                    <h4>12. Cookie Law Compliance</h4>
+                    <p>Our legal team ensures ongoing compliance with global cookie laws. We monitor legislative changes in all jurisdictions we operate. Cookie implementations vary by geographic region when required. Special provisions apply for EU/UK GDPR compliance. California CCPA cookie requirements are fully implemented. Our compliance framework includes regular staff training. External audits validate our cookie law adherence. Compliance documentation is available for regulators. We maintain a compliance hotline for employee concerns. Annual compliance reports are reviewed by senior management.</p>
+                </div>
+                
+                <div class="contact-point">
+                    <h4>13. Cookie Technology Questions</h4>
+                    <p>Our engineering team answers technical questions about cookie implementation. Common topics include cookie encryption methods and storage. We explain technical differences between cookie types. Questions about HTTP-only and secure flags are welcome. Our team can discuss same-site cookie attributes. Technical documentation is available for developers. We share best practices for cookie security. Architecture decisions about cookie usage are documented. Performance impacts of cookies can be explained. Future cookie technology trends are monitored closely.</p>
+                </div>
+                
+                <div class="contact-point">
+                    <h4>14. Cookie Preference Synchronization</h4>
+                    <p>For registered users, we offer cross-device cookie preference syncing. This feature requires explicit opt-in during account setup. Preferences are encrypted during transmission and storage. Syncing occurs automatically when you log in from new devices. You can manage synced devices through your account settings. Syncing excludes certain browser-specific technical cookies. The system notifies you when preferences are synchronized. Manual overrides are possible for individual devices. Syncing delays may occur during high traffic periods. This feature is unavailable for guest users without accounts.</p>
+                </div>
+                
+                <div class="contact-point">
+                    <h4>15. Cookie Impact Assessments</h4>
+                    <p>We conduct Data Protection Impact Assessments for significant cookie changes. Assessments evaluate privacy risks and mitigation strategies. High-risk cookies undergo additional scrutiny. Assessment results inform our cookie implementation decisions. Findings may lead to cookie modifications or removals. Stakeholders from multiple departments review assessments. Significant findings are reported to senior leadership. Assessment documentation is maintained for regulatory compliance. Third-party auditors may review assessment processes. Continuous monitoring follows implementation of assessed cookies.</p>
+                </div>
+                
+                <div class="contact-point">
+                    <h4>16. Cookie Performance Metrics</h4>
+                    <p>We track various metrics related to cookie usage and performance. Common metrics include cookie acceptance rates by category. Performance data helps optimize the user experience. Metrics are analyzed while preserving user anonymity. A/B testing may evaluate different cookie approaches. Performance dashboards are available to authorized staff. Significant metric changes trigger investigation. Metrics inform our cookie policy updates. Benchmarking compares our practices to industry standards. Metrics are reviewed quarterly by the privacy team.</p>
+                </div>
+                
+                <div class="contact-point">
+                    <h4>17. Cookie Education Resources</h4>
+                    <p>We provide educational materials about web cookies and privacy. Resources include videos, FAQs, and interactive guides. Content is tailored for different knowledge levels. School programs teach digital literacy including cookies. Webinars cover recent developments in cookie technology. Our library includes third-party expert perspectives. Training is available for organizations upon request. Materials are reviewed annually for accuracy. Multilingual resources are available in 12 languages. Feedback shapes future educational content development.</p>
+                </div>
+                
+                <div class="contact-point">
+                    <h4>18. Cookie Research Participation</h4>
+                    <p>We conduct user research to improve cookie implementations. Participation is voluntary and requires consent. Research may involve surveys or usability testing. Participants can opt out at any time. Findings are anonymized before analysis. Research helps develop more transparent cookie practices. Participants may receive compensation for their time. Ethical review boards approve all research methodologies. Results are published in aggregated form only. Research insights inform our product development roadmap.</p>
+                </div>
+                
+                <div class="contact-point">
+                    <h4>19. Cookie Incident Reporting</h4>
+                    <p>Report any suspected cookie-related incidents to our privacy team. Incidents include unauthorized cookie placement or data leakage. Our response protocol follows industry best practices. Serious incidents are reported to regulators when required. Affected users are notified according to legal obligations. Incident reports document root causes and remedies. Corrective actions prevent recurrence of similar incidents. Third-party experts may assist with complex investigations. Incident trends are analyzed for systemic improvements. Transparency about incidents builds user trust.</p>
+                </div>
+                
+                <div class="contact-point">
+                    <h4>20. Cookie Innovation Suggestions</h4>
+                    <p>We welcome suggestions for improving our cookie practices. The innovation team reviews all submitted ideas regularly. Feasible suggestions are piloted on test environments. User feedback guides cookie technology development. Innovative approaches balance functionality and privacy. We collaborate with academic institutions on cookie research. Patent applications may protect significant innovations. Successful implementations are acknowledged publicly. Innovation metrics track suggestion conversion rates. Continuous improvement is a core organizational value.</p>
+                </div>
+                
+                <div class="contact-point">
+                    <h4>21. Cookie Accessibility Support</h4>
+                    <p>Our cookie consent interface meets WCAG 2.1 AA standards. Screen reader users receive appropriate cookie notifications. Keyboard navigation supports all cookie preference functions. Text alternatives are provided for visual elements. Users can adjust cookie interface text size and contrast. We test with users who have diverse abilities. Accessibility specialists review cookie implementations. Feedback from disability organizations shapes improvements. Dedicated support assists users with accessibility needs. Continuous monitoring ensures ongoing compliance.</p>
+                </div>
+                
+                <div class="contact-point">
+                    <h4>22. Cookie Policy Translations</h4>
+                    <p>Our cookie policy is available in multiple languages. Professional linguists ensure accurate translations. Regional legal requirements inform localized versions. Users can request specific language versions. Translated policies are updated simultaneously with the English version. Cultural appropriateness reviews precede publication. Machine translations are clearly identified as provisional. Community feedback improves translation quality. Certified translations are available for legal purposes. Our goal is to make policies accessible globally.</p>
+                </div>
+                
+                <div class="contact-point">
+                    <h4>23. Cookie Historical Data</h4>
+                    <p>Archived versions of our cookie policy document historical changes. Version control shows the evolution of our practices. Significant changes are highlighted in revision histories. Researchers can request access to historical cookie data. Retention schedules comply with document preservation policies. Historical context helps explain current implementations. Legacy cookie documentation is maintained for reference. Digital preservation ensures long-term accessibility. Historical trends inform future strategy. Our archives serve as an institutional memory.</p>
+                </div>
+                
+                <div class="contact-point">
+                    <h4>24. Cookie Vendor Management</h4>
+                    <p>We maintain rigorous standards for cookie technology vendors. Vendor selection processes evaluate privacy practices. Contracts include strict data protection requirements. Regular audits assess vendor compliance. Performance metrics track vendor reliability. Alternative vendors are identified for critical functions. Vendor management includes contingency planning. Security certifications are required for sensitive operations. Vendor personnel undergo background checks. Continuous monitoring ensures ongoing suitability.</p>
+                </div>
+                
+                <div class="contact-point">
+                    <h4>25. Cookie Policy Training</h4>
+                    <p>All employees receive training on our cookie policy. Role-specific training addresses different responsibilities. New hires complete training during onboarding. Annual refresher courses maintain awareness. Training includes practical scenarios and case studies. Comprehension testing verifies understanding. External experts occasionally lead specialized sessions. Training materials are updated with policy changes. Completion records are maintained for compliance. Feedback improves training effectiveness.</p>
+                </div>
+                
+                <div class="contact-point">
+                    <h4>26. Cookie Implementation Reviews</h4>
+                    <p>Quarterly reviews evaluate all active cookie implementations. Technical teams assess functionality and performance. Privacy reviews ensure continued compliance. Business units confirm ongoing necessity. Review findings may prompt adjustments. Sunset policies retire obsolete cookies. Change management controls govern modifications. Cross-functional teams participate in reviews. Documentation captures decisions and rationales. Continuous improvement is the review objective.</p>
+                </div>
+                
+                <div class="contact-point">
+                    <h4>27. Cookie-Related Legal Requests</h4>
+                    <p>Legal professionals can submit formal requests regarding cookies. Valid legal process is required for data disclosure. Our legal team reviews all requests for validity. We minimize disclosed data to what's legally required. Requestors must demonstrate proper jurisdiction. User notification occurs unless legally prohibited. We challenge overly broad or vague requests. Detailed logs document all legal disclosures. External counsel advises on complex matters. We publish transparency reports about request volumes.</p>
+                </div>
+                
+                <div class="contact-point">
+                    <h4>28. Cookie Technology Partnerships</h4>
+                    <p>We collaborate with industry groups on cookie standards. Research partnerships advance privacy-preserving technologies. Academic partnerships foster innovation. Standards bodies participation shapes best practices. Technology trials test experimental approaches. Joint advocacy promotes balanced regulation. Knowledge sharing benefits the broader ecosystem. Partnership criteria emphasize alignment with our values. Governance structures ensure mutual benefit. Strategic partnerships are long-term commitments.</p>
+                </div>
+                
+                <div class="contact-point">
+                    <h4>29. Cookie Policy Governance</h4>
+                    <p>A cross-functional committee oversees cookie policy. Senior leadership reviews policy annually. External experts provide independent perspectives. Governance ensures alignment with organizational values. Decision-making balances multiple stakeholders. Documentation maintains an audit trail. Escalation paths address contentious issues. Performance indicators measure policy effectiveness. Governance evolves with changing expectations. Transparency characterizes our governance approach.</p>
+                </div>
+                
+                <div class="contact-point">
+                    <h4>30. Cookie Storage Technical Details</h4>
+                    <p>First-party cookies are restricted to our domains. Secure flags protect sensitive cookies. Http-only flags prevent client-side script access. Same-site attributes mitigate CSRF risks. Storage limits comply with browser specifications. Encryption protects sensitive cookie contents. Storage duration aligns with documented policies. Partitioning isolates different cookie types. Storage mechanisms undergo security testing. Technical documentation details implementation specifics.</p>
+                </div>
+                
+                <div class="contact-point">
+                    <h4>31. Cookie-Related User Notifications</h4>
+                    <p>We notify users about significant cookie changes. Notifications explain changes and their impacts. Multiple channels ensure broad awareness. Notifications occur before changes take effect. User feedback informs notification improvements. Timing considers user convenience. Accessibility features accommodate all users. Notifications avoid unnecessary technical jargon. Follow-up confirms understanding where appropriate. Notification effectiveness is measured.</p>
+                </div>
+                
+                <div class="contact-point">
+                    <h4>32. Cookie Preference Defaults</h4>
+                    <p>Default settings reflect privacy-friendly choices. First-time users see clear preference options. Defaults vary by jurisdiction when required. User testing informs default selections. Defaults don't preclude meaningful choice. Explanations accompany default settings. Overriding defaults is straightforward. Defaults are reviewed periodically. Regulatory changes may prompt default adjustments. Transparency characterizes our default approach.</p>
+                </div>
+                
+                <div class="contact-point">
+                    <h4>33. Cookie Performance Optimization</h4>
+                    <p>We minimize cookie payload sizes for efficiency. Cookie domains are scoped appropriately. Expiration times balance utility and privacy. Compression reduces bandwidth usage. Asynchronous loading prevents rendering delays. Cookie consolidation reduces total numbers. Performance metrics guide optimization efforts. Testing identifies improvement opportunities. User experience remains the priority. Continuous monitoring maintains gains.</p>
+                </div>
+                
+                <div class="contact-point">
+                    <h4>34. Cookie Error Handling</h4>
+                    <p>Graceful degradation handles cookie rejection. User-friendly messages explain cookie errors. Fallback mechanisms maintain functionality. Error logging facilitates troubleshooting. Monitoring alerts staff to emerging issues. Error patterns inform system improvements. User guidance helps resolve common problems. Testing verifies error scenario handling. Documentation assists technical support. Root cause analysis prevents recurrence.</p>
+                </div>
+                
+                <div class="contact-point">
+                    <h4>35. Cookie Migration Support</h4>
+                    <p>We assist users transitioning between devices or browsers. Migration tools preserve preference settings. Documentation guides self-service migration. Support staff can assist with complex cases. Testing ensures migration reliability. Verification confirms successful transfers. Legacy system compatibility is maintained. Migration timing considers user convenience. Feedback improves migration processes. Metrics track migration success rates.</p>
+                </div>
+                
+                <div class="contact-point">
+                    <h4>36. Cookie-Related System Integration</h4>
+                    <p>Our cookies integrate with various backend systems. APIs enable controlled data exchange. Integration points undergo security review. Performance impacts are monitored. Documentation assists developers. Versioning maintains compatibility. Testing precedes production deployment. Fail-safes prevent system-wide disruptions. Integration architectures emphasize modularity. Continuous improvement refines integrations.</p>
+                </div>
+                
+                <div class="contact-point">
+                    <h4>37. Cookie Technology Roadmap</h4>
+                    <p>Our public roadmap outlines planned cookie improvements. User feedback influences roadmap priorities. Emerging technologies are evaluated regularly. Roadmap balances innovation and stability. Milestones have realistic timelines. Resource allocation aligns with roadmap. Progress updates maintain transparency. Contingency planning addresses uncertainties. Stakeholder input shapes direction. Roadmap revisions follow structured processes.</p>
+                </div>
+                
+                <div class="contact-point">
+                    <h4>38. Cookie Policy Benchmarking</h4>
+                    <p>We compare our practices with industry leaders. Benchmarking identifies improvement opportunities. Multiple frameworks inform assessments. Gap analyses guide development priorities. Peer reviews provide external perspectives. Metrics enable quantitative comparisons. Best practices are adapted appropriately. Benchmarking occurs annually. Results inform strategic planning. Leadership reviews benchmarking findings.</p>
+                </div>
+                
+                <div class="contact-point">
+                    <h4>39. Cookie-Related User Research</h4>
+                    <p>We study how users interact with cookie controls. Research methods include surveys and usability tests. Findings inform interface improvements. Participant privacy is rigorously protected. Diverse user groups are represented. Longitudinal studies track evolving behaviors. Research ethics govern all activities. Published findings advance industry knowledge. Actionable insights drive tangible changes. Research investments demonstrate commitment.</p>
+                </div>
+                
+                <div class="contact-point">
+                    <h4>40. Future Cookie Technology Planning</h4>
+                    <p>We monitor emerging cookie alternatives like Storage Access API. Privacy-preserving technologies are prioritized. Future planning balances innovation and stability. Scenario planning prepares for various futures. Technology partnerships explore new approaches. Prototyping tests promising concepts. Regulatory trends inform development. User needs remain central to planning. Resource allocation supports forward-looking work. Continuous learning maintains our edge.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-col">
+                <h3>RainDrops</h3>
+                <p>Smart rainwater solutions for the modern city. Sustainable, efficient, and future-ready water management systems.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="solutions.html">Solutions</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Support</h3>
+                <ul class="footer-links">
+                    <li><a href="faq.html">FAQs</a></li>
+                    <li><a href="installation.html">Installation Guides</a></li>
+                    <li><a href="maintenance.html">Maintenance Tips</a></li>
+                    <li><a href="warranty.html">Warranty Info</a></li>
+                    <li><a href="support.html">Technical Support</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+                <ul class="contact-info">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>123 Water Way, Suite 100<br>Portland, OR 97201</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone-alt"></i>
+                        <span>1-800-RAIN-DROP<br>(1-800-724-6376)</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span>info@raindrops.com</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-clock"></i>
+                        <span>Monday-Friday: 9AM-6PM PST</span>
+                    </li>
+                </ul>
+                
+                <h3>Newsletter</h3>
+                <p>Stay updated on urban water innovations and product news.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address">
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container footer-bottom-container">
+                <div class="copyright">
+                    &copy; 2023 RainDrops Inc. All rights reserved.
+                </div>
+                <div class="legal-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms & Conditions</a>
+                    <a href="cookies.html" aria-current="page">Cookie Policy</a>
+                    <a href="accessibility.html">Accessibility</a>
+                    <a href="sitemap.html">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-consent" id="cookieConsent">
+        <div class="container cookie-consent-container">
+            <div class="cookie-consent-text">
+                <p>We use cookies to enhance your experience on our website. By clicking "Accept", you consent to our use of all cookies. You can manage your preferences by clicking "Cookie Settings" or decline non-essential cookies. Learn more in our <a href="cookies.html">Cookie Policy</a>.</p>
+            </div>
+            <div class="cookie-consent-buttons">
+                <button class="cookie-btn cookie-btn-decline" id="cookieDecline">Decline</button>
+                <button class="cookie-btn cookie-btn-accept" id="cookieAccept">Accept</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Dark Mode Toggle
+        const darkModeToggle = document.createElement('button');
+        darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        darkModeToggle.style.position = 'fixed';
+        darkModeToggle.style.bottom = '80px';
+        darkModeToggle.style.right = '20px';
+        darkModeToggle.style.width = '50px';
+        darkModeToggle.style.height = '50px';
+        darkModeToggle.style.borderRadius = '50%';
+        darkModeToggle.style.backgroundColor = 'var(--deep-blue)';
+        darkModeToggle.style.color = 'white';
+        darkModeToggle.style.border = 'none';
+        darkModeToggle.style.cursor = 'pointer';
+        darkModeToggle.style.boxShadow = '0 2px 10px rgba(0,0,0,0.2)';
+        darkModeToggle.style.zIndex = '1000';
+        darkModeToggle.style.display = 'flex';
+        darkModeToggle.style.justifyContent = 'center';
+        darkModeToggle.style.alignItems = 'center';
+        darkModeToggle.style.fontSize = '1.2rem';
+        
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            darkModeToggle.innerHTML = document.body.classList.contains('dark-mode') ? 
+                '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+        });
+        
+        document.body.appendChild(darkModeToggle);
+        
+        // Cookie Consent Banner
+        const cookieConsent = document.getElementById('cookieConsent');
+        const cookieAccept = document.getElementById('cookieAccept');
+        const cookieDecline = document.getElementById('cookieDecline');
+        
+        // Check if user has already made a choice
+        if (!localStorage.getItem('cookieConsent')) {
+            // Show banner if no choice has been made
+            setTimeout(() => {
+                cookieConsent.classList.add('active');
+            }, 1000);
+        }
+        
+        // Handle accept button
+        cookieAccept.addEventListener('click', () => {
+            localStorage.setItem('cookieConsent', 'accepted');
+            cookieConsent.classList.remove('active');
+            // Here you would typically load all cookies
+        });
+        
+        // Handle decline button
+        cookieDecline.addEventListener('click', () => {
+            localStorage.setItem('cookieConsent', 'declined');
+            cookieConsent.classList.remove('active');
+            // Here you would typically only load essential cookies
+        });
+    </script>
+</body>
+</html>

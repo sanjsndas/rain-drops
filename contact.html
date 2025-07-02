@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | RainDrops - Smart Rainwater Solutions</title>
+    <style>
+        /* Global Styles */
+        :root {
+            --deep-blue: #1a4b8c;
+            --aqua-green: #2ec4b6;
+            --light-gray: #f8f9fa;
+            --dark-gray: #343a40;
+            --white: #ffffff;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light-gray);
+            color: var(--dark-gray);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .logo h1 {
+            color: var(--deep-blue);
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .logo span {
+            color: var(--aqua-green);
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--dark-gray);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            margin: 0 5px;
+            font-weight: 500;
+            transition: var(--transition);
+            border-radius: 4px;
+        }
+
+        .nav-links a:hover, .nav-links a:focus {
+            background-color: var(--aqua-green);
+            color: var(--white);
+        }
+
+        .nav-links a[aria-current="page"] {
+            background-color: var(--deep-blue);
+            color: var(--white);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--deep-blue);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(26, 75, 140, 0.8), rgba(46, 196, 182, 0.8)), 
+                        url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        /* Contact Content */
+        .contact-content {
+            background-color: var(--white);
+            padding: 4rem 0;
+        }
+
+        .contact-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .contact-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .contact-header h1 {
+            color: var(--deep-blue);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-header p {
+            color: var(--dark-gray);
+            font-size: 1.1rem;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .contact-info {
+            background-color: var(--light-gray);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        .contact-info h2 {
+            color: var(--deep-blue);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        .info-item {
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .info-icon {
+            color: var(--aqua-green);
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            margin-top: 0.3rem;
+        }
+
+        .info-content h3 {
+            color: var(--deep-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .info-content p, .info-content a {
+            color: var(--dark-gray);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .info-content a:hover {
+            color: var(--aqua-green);
+        }
+
+        .contact-form {
+            background-color: var(--light-gray);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        .contact-form h2 {
+            color: var(--deep-blue);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--dark-gray);
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: var(--aqua-green);
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(46, 196, 182, 0.2);
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--aqua-green);
+            color: var(--white);
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            background-color: var(--deep-blue);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-section {
+            margin-top: 4rem;
+        }
+
+        .faq-section h2 {
+            color: var(--deep-blue);
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        .faq-item {
+            margin-bottom: 1.5rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .faq-item:hover {
+            border-color: var(--aqua-green);
+        }
+
+        .faq-question {
+            background-color: var(--light-gray);
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question h3 {
+            color: var(--deep-blue);
+            margin-bottom: 0;
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-answer.active {
+            padding: 1.5rem;
+            max-height: 500px;
+        }
+
+        .faq-answer p {
+            margin-bottom: 1rem;
+        }
+
+        .faq-answer ul {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+        }
+
+        .faq-answer li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Locations Section */
+        .locations-section {
+            margin-top: 4rem;
+        }
+
+        .locations-section h2 {
+            color: var(--deep-blue);
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        .locations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .location-card {
+            background-color: var(--light-gray);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .location-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .location-img {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .location-content {
+            padding: 1.5rem;
+        }
+
+        .location-content h3 {
+            color: var(--deep-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .location-content p {
+            margin-bottom: 0.5rem;
+            color: var(--dark-gray);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-gray);
+            color: var(--white);
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h3 {
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            position: relative;
+        }
+
+        .footer-col h3::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 50px;
+            height: 2px;
+            background-color: var(--aqua-green);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: #b1b1b1;
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-block;
+        }
+
+        .footer-links a:hover {
+            color: var(--aqua-green);
+            transform: translateX(5px);
+        }
+
+        .contact-info-footer {
+            list-style: none;
+        }
+
+        .contact-info-footer li {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .contact-info-footer i {
+            color: var(--aqua-green);
+            margin-right: 10px;
+            margin-top: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--white);
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--aqua-green);
+            transform: translateY(-5px);
+        }
+
+        .newsletter-form {
+            display: flex;
+            margin-top: 1.5rem;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 4px 0 0 4px;
+            font-size: 1rem;
+        }
+
+        .newsletter-form button {
+            background-color: var(--aqua-green);
+            color: var(--white);
+            border: none;
+            padding: 0 1.5rem;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .newsletter-form button:hover {
+            background-color: var(--deep-blue);
+        }
+
+        /* Footer Bottom */
+        .footer-bottom {
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+
+        .footer-bottom-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .copyright {
+            margin-bottom: 1rem;
+            color: #b1b1b1;
+        }
+
+        .legal-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .legal-links a {
+            color: #b1b1b1;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .legal-links a:hover {
+            color: var(--aqua-green);
+        }
+
+        /* Dark Mode */
+        .dark-mode {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        .dark-mode .contact-content {
+            background-color: #1e1e1e;
+        }
+
+        .dark-mode .contact-info,
+        .dark-mode .contact-form,
+        .dark-mode .location-card {
+            background-color: #2d2d2d;
+        }
+
+        .dark-mode .info-content h3,
+        .dark-mode .contact-form h2,
+        .dark-mode .faq-section h2,
+        .dark-mode .locations-section h2,
+        .dark-mode .location-content h3 {
+            color: var(--aqua-green);
+        }
+
+        .dark-mode .form-group input,
+        .dark-mode .form-group textarea,
+        .dark-mode .form-group select {
+            background-color: #2d2d2d;
+            color: #e0e0e0;
+            border-color: #444;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+
+            .header-container {
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            .logo {
+                margin-bottom: 1rem;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+                display: none;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                margin: 0.2rem 0;
+                padding: 0.8rem;
+                text-align: center;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+            }
+
+            .hero {
+                height: auto;
+                padding: 4rem 0;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .contact-header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <h1>Rain<span>Drops</span></h1>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="contact.html" aria-current="page">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Contact RainDrops</h2>
+            <p>We're here to help with all your rainwater harvesting questions and needs.</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="contact-content">
+        <div class="container contact-container">
+            <div class="contact-header">
+                <h1>Get in Touch With Us</h1>
+                <p>Whether you have questions about our products, need technical support, or want to discuss a custom solution, our team is ready to assist you.</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Contact Information</h2>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Headquarters</h3>
+                            <p>123 Water Way, Suite 100<br>Portland, OR 97201</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Phone</h3>
+                            <p><a href="tel:18007246376">1-800-RAIN-DROP<br>(1-800-724-6376)</a></p>
+                            <p>Monday-Friday: 9AM-6PM PST</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Email</h3>
+                            <p><a href="mailto:info@raindrops.com">info@raindrops.com</a></p>
+                            <p>General inquiries</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Technical Support</h3>
+                            <p><a href="mailto:support@raindrops.com">support@raindrops.com</a></p>
+                            <p><a href="tel:18007246377">1-800-RAIN-DRP (1-800-724-6377)</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Sales Inquiries</h3>
+                            <p><a href="mailto:sales@raindrops.com">sales@raindrops.com</a></p>
+                            <p><a href="tel:18007246378">1-800-RAIN-SALE (1-800-724-6378)</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h2>Send Us a Message</h2>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a subject</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="sales">Sales Questions</option>
+                                <option value="support">Technical Support</option>
+                                <option value="installation">Installation Questions</option>
+                                <option value="warranty">Warranty Information</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="faq-section">
+                <h2>Frequently Asked Questions</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>What are your business hours?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our customer service team is available Monday through Friday from 9:00 AM to 6:00 PM Pacific Standard Time. Technical support is available 24/7 for emergency issues with installed systems. Our showroom at our Portland headquarters is open to the public Monday through Saturday from 10:00 AM to 5:00 PM. We are closed on major holidays including New Year's Day, Independence Day, Thanksgiving, and Christmas Day.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>How do I schedule a consultation?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can schedule a free consultation with our rainwater harvesting specialists in several ways:</p>
+                        <ul>
+                            <li>Call our sales team at 1-800-RAIN-SALE (1-800-724-6378)</li>
+                            <li>Email sales@raindrops.com with your preferred dates and times</li>
+                            <li>Use the online scheduling tool in your customer portal (for registered users)</li>
+                            <li>Visit our showroom during business hours</li>
+                        </ul>
+                        <p>Consultations typically last 60-90 minutes and can be conducted in person, by phone, or via video conference. We recommend having information about your property available, including roof area, water usage needs, and any existing water collection systems.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>What information should I have ready when contacting support?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>To help us resolve your technical support inquiry as quickly as possible, please have the following information available:</p>
+                        <ul>
+                            <li>Your RainDrops system model number (found on your installation documentation or equipment labels)</li>
+                            <li>Date of installation</li>
+                            <li>Description of the issue including when it started and any error messages</li>
+                            <li>Photos or videos of the issue (if applicable)</li>
+                            <li>Your account information (if you're a registered user)</li>
+                            <li>Recent maintenance or changes to your system</li>
+                        </ul>
+                        <p>For smart system issues, please note your app version number and mobile device operating system. Having this information ready will help our support team diagnose and resolve your issue more efficiently.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Do you offer emergency services?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we provide emergency services for critical system failures that could lead to property damage or health hazards. Our 24/7 emergency line (1-800-RAIN-EMG) is staffed by trained technicians who can provide immediate assistance for:</p>
+                        <ul>
+                            <li>Major leaks or flooding caused by system failures</li>
+                            <li>Complete system shutdowns affecting critical water supply</li>
+                            <li>Water quality issues posing health risks</li>
+                            <li>Electrical or safety hazards related to system components</li>
+                        </ul>
+                        <p>Emergency service calls may incur additional fees depending on the time and circumstances. Non-emergency issues reported through the emergency line will be redirected to our standard support channels during business hours.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>How can I become a RainDrops dealer or installer?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We welcome inquiries from qualified professionals interested in joining our network of authorized dealers and installers. The application process includes:</p>
+                        <ul>
+                            <li>Completion of our online dealer application form</li>
+                            <li>Proof of relevant business licenses and insurance</li>
+                            <li>Demonstrated experience in plumbing, water systems, or related fields</li>
+                            <li>Completion of our certification training program</li>
+                            <li>Agreement to our dealer terms and quality standards</li>
+                        </ul>
+                        <p>Benefits of becoming an authorized RainDrops dealer include access to our premium products, technical training, marketing support, and lead generation. For more information, please contact our dealer network team at dealers@raindrops.com or call 1-800-RAIN-DLR (1-800-724-6357).</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>What is your warranty claim process?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>To initiate a warranty claim, please follow these steps:</p>
+                        <ol>
+                            <li>Gather your proof of purchase and product serial numbers</li>
+                            <li>Document the issue with photos or videos if possible</li>
+                            <li>Contact our warranty department at warranty@raindrops.com or call 1-800-RAIN-WRN (1-800-724-6379)</li>
+                            <li>Our team will verify your warranty coverage and guide you through next steps</li>
+                            <li>For eligible claims, we will arrange for repair, replacement, or service as appropriate</li>
+                        </ol>
+                        <p>Most warranty claims are processed within 5-7 business days. Some claims may require inspection by an authorized technician. Please note that warranty coverage does not include damage caused by improper installation, misuse, or natural disasters. Refer to your product documentation for specific warranty terms and limitations.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Do you offer volume discounts for large projects?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we offer customized pricing for large-scale projects including:</p>
+                        <ul>
+                            <li>Multi-unit residential buildings</li>
+                            <li>Commercial and industrial installations</li>
+                            <li>Municipal water projects</li>
+                            <li>Educational institution installations</li>
+                            <li>Non-profit and community projects</li>
+                        </ul>
+                        <p>Discounts are based on order volume, project scope, and partnership opportunities. Our commercial sales team can provide a customized quote based on your specific needs. Please contact our commercial division at commercial@raindrops.com or call 1-800-RAIN-COM (1-800-724-6266) to discuss your project requirements and potential savings.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>How do I request a quote for a custom system?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>To receive a quote for a custom rainwater harvesting system, please provide the following information to our design team:</p>
+                        <ul>
+                            <li>Property address and site plans (if available)</li>
+                            <li>Roof area and material details</li>
+                            <li>Intended water uses (irrigation, toilet flushing, etc.)</li>
+                            <li>Estimated daily water requirements</li>
+                            <li>Local rainfall data (we can assist with this if needed)</li>
+                            <li>Any special requirements or constraints</li>
+                        </ul>
+                        <p>Our team will review your specifications and provide a detailed proposal typically within 7-10 business days. For complex projects, we may recommend a site visit (which may incur a fee that can be applied toward your system purchase if you proceed). Contact our custom solutions team at custom@raindrops.com to begin the quoting process.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="locations-section">
+                <h2>Our Locations</h2>
+                
+                <div class="locations-grid">
+                    <div class="location-card">
+                        <div class="location-img" style="background-image: url('https://images.unsplash.com/photo-1542223616-740d5dff7f56?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                        <div class="location-content">
+                            <h3>Portland Headquarters</h3>
+                            <p><i class="fas fa-map-marker-alt"></i> 123 Water Way, Suite 100<br>Portland, OR 97201</p>
+                            <p><i class="fas fa-phone"></i> 1-800-RAIN-DROP</p>
+                            <p><i class="fas fa-clock"></i> Mon-Sat: 10AM-5PM</p>
+                            <p><i class="fas fa-building"></i> Showroom, Offices, Training Center</p>
+                        </div>
+                    </div>
+                    
+                    <div class="location-card">
+                        <div class="location-img" style="background-image: url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                        <div class="location-content">
+                            <h3>Seattle Regional Office</h3>
+                            <p><i class="fas fa-map-marker-alt"></i> 456 Rainier Ave<br>Seattle, WA 98101</p>
+                            <p><i class="fas fa-phone"></i> 1-800-RAIN-SEA</p>
+                            <p><i class="fas fa-clock"></i> Mon-Fri: 9AM-5PM</p>
+                            <p><i class="fas fa-building"></i> Sales, Support, Warehouse</p>
+                        </div>
+                    </div>
+                    
+                    <div class="location-card">
+                        <div class="location-img" style="background-image: url('https://images.unsplash.com/photo-1496564203457-11bb12075d90?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                        <div class="location-content">
+                            <h3>San Francisco Showroom</h3>
+                            <p><i class="fas fa-map-marker-alt"></i> 789 Bay Street<br>San Francisco, CA 94107</p>
+                            <p><i class="fas fa-phone"></i> 1-800-RAIN-SF</p>
+                            <p><i class="fas fa-clock"></i> Tue-Sat: 10AM-6PM</p>
+                            <p><i class="fas fa-building"></i> Showroom, Design Center</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-col">
+                <h3>RainDrops</h3>
+                <p>Smart rainwater solutions for the modern city. Sustainable, efficient, and future-ready water management systems.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="solutions.html">Solutions</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Support</h3>
+                <ul class="footer-links">
+                    <li><a href="faq.html">FAQs</a></li>
+                    <li><a href="installation.html">Installation Guides</a></li>
+                    <li><a href="maintenance.html">Maintenance Tips</a></li>
+                    <li><a href="warranty.html">Warranty Info</a></li>
+                    <li><a href="support.html">Technical Support</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+                <ul class="contact-info-footer">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>123 Water Way, Suite 100<br>Portland, OR 97201</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone-alt"></i>
+                        <span>1-800-RAIN-DROP<br>(1-800-724-6376)</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span>info@raindrops.com</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-clock"></i>
+                        <span>Monday-Friday: 9AM-6PM PST</span>
+                    </li>
+                </ul>
+                
+                <h3>Newsletter</h3>
+                <p>Stay updated on urban water innovations and product news.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address">
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container footer-bottom-container">
+                <div class="copyright">
+                    &copy; 2023 RainDrops Inc. All rights reserved.
+                </div>
+                <div class="legal-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms & Conditions</a>
+                    <a href="cookies.html">Cookie Policy</a>
+                    <a href="accessibility.html">Accessibility</a>
+                    <a href="sitemap.html">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+        
+        // FAQ Toggle Function
+        function toggleFaq(element) {
+            const answer = element.nextElementSibling;
+            const icon = element.querySelector('i');
+            
+            answer.classList.toggle('active');
+            if (answer.classList.contains('active')) {
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-up');
+            } else {
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-chevron-down');
+            }
+        }
+        
+        // Form Submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will respond within 24-48 hours.');
+            this.reset();
+        });
+        
+        // Dark Mode Toggle
+        const darkModeToggle = document.createElement('button');
+        darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        darkModeToggle.style.position = 'fixed';
+        darkModeToggle.style.bottom = '20px';
+        darkModeToggle.style.right = '20px';
+        darkModeToggle.style.width = '50px';
+        darkModeToggle.style.height = '50px';
+        darkModeToggle.style.borderRadius = '50%';
+        darkModeToggle.style.backgroundColor = 'var(--deep-blue)';
+        darkModeToggle.style.color = 'white';
+        darkModeToggle.style.border = 'none';
+        darkModeToggle.style.cursor = 'pointer';
+        darkModeToggle.style.boxShadow = '0 2px 10px rgba(0,0,0,0.2)';
+        darkModeToggle.style.zIndex = '1000';
+        darkModeToggle.style.display = 'flex';
+        darkModeToggle.style.justifyContent = 'center';
+        darkModeToggle.style.alignItems = 'center';
+        darkModeToggle.style.fontSize = '1.2rem';
+        
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            darkModeToggle.innerHTML = document.body.classList.contains('dark-mode') ? 
+                '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+        });
+        
+        document.body.appendChild(darkModeToggle);
+    </script>
+</body>
+</html>
